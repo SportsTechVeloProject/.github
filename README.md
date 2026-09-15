@@ -43,8 +43,5 @@ their velocity and left/right asymmetry.
 
 ## Decisions worth knowing about
 
-- **Movesense over a custom IMU board.** Two weeks on our own hardware
-  without a stable connection; switching moved the problem from electronics
-  to analysis, which is what the project is actually about. ⟨ADR-001⟩
-- **Web app rather than native.** ⟨ADR-002 — one line once you've settled
-  the Web Bluetooth question⟩
+- **Movesense over a custom IMU board.** 
+- **Web app rather than native.**
