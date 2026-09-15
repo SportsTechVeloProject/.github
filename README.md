@@ -34,9 +34,9 @@ their velocity and left/right asymmetry.
 
 ## Where things are
 
-- **[Project board](⟨link⟩)** — current sprint, backlog, who owns what
+- **[Project board](⟨https://github.com/orgs/SportsTechVeloProject/projects/1/views/4⟩)** — current sprint, backlog, who owns what
 - **[Weekly log](⟨link⟩)** — what we did and what we learned, week by week
-- **[Decision records](⟨link⟩)** — why the project looks the way it does
+- **[Decision records](⟨https://github.com/SportsTechVeloProject/MoveSenseCode/blob/main/docs/Decisions.md⟩)** — why the project looks the way it does
 - **[MoveSenseCode](https://github.com/SportsTechVeloProject/MoveSenseCode)** — sensor handling and web app
 - **[Product-testing](https://github.com/SportsTechVeloProject/Product-testing)** — test scripts and validation
 - **[Users Website](https://github.com/SportsTechVeloProject/Product-and-UI)** - eventual user interface
