@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Question for the team
+    url: https://github.com/SportsTechVeloProject/VelocityMeasuringProject_Issues/discussions
+    about: Not a meeting or a task — ask here.
