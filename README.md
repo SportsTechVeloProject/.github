@@ -1,26 +1,50 @@
+<!-- Optional: a photo of the sensors on the bar, or a velocity plot.
+     Upload it by dragging into any GitHub comment box, then paste the
+     URL it generates here. This is the highest-value thing on the page. -->
+
 # SportsTech Velo
 
-Real-time barbell velocity feedback using dual Movesense IMUs — one on each
-sleeve of the bar. We measure the concentric phase of a lift and tell the
-athlete where in the rep they're losing speed or pulling unevenly.
+**Problem being solved statement**
 
-University project in sports technology, autumn 2026.
+We put a Movesense IMU on each end of the barbell and turn the raw motion
+into feedback the athlete can act on between reps: bar velocity through the
+concentric phase, and the difference between the left and right side of the
+lift.
+
+University project in sports technology at KTH, autumn 2026.
+Supervisor: Jonas Willén.
+
+---
+
+## How it works
+
+Two Movesense sensors clamp to the barbell sleeves and stream accelerometer
+and gyroscope data ⟨over BLE — adjust if the path is different⟩ to a web app,
+which segments each rep, isolates the upward phase, and shows the athlete
+their velocity and left/right asymmetry.
+
 
 ## The team
 
-| | |
+| Who | Focus |
 |---|---|
-| Addi | Scrum master |
-| Arvid, Silje | Data pipeline, analysis, validation |
-| Hugo, Greipur | UI/UX, backend, physical product |
+| **Addi** | Scrum master, project management |
+| **Arvid**, **Silje** | Data pipeline, analysis, validation |
+| **Hugo**, **Greipur** | UI/UX, backend, physical product |
 
 ## Where things are
 
-- **[Project board](https://github.com/orgs/SportsTechVeloProject/projects/1)** — current sprint and backlog
-- **[Weekly log](link)** — what we did, what we learned, week by week
-- **[Decisions](link)** — why the project looks the way it does
-- **[MoveSenseCode](https://github.com/SportsTechVeloProject/MoveSenseCode)** — sensor and app code
+- **[Project board](⟨link⟩)** — current sprint, backlog, who owns what
+- **[Weekly log](⟨link⟩)** — what we did and what we learned, week by week
+- **[Decision records](⟨link⟩)** — why the project looks the way it does
+- **[MoveSenseCode](https://github.com/SportsTechVeloProject/MoveSenseCode)** — sensor handling and web app
+- **[Product-testing](https://github.com/SportsTechVeloProject/Product-testing)** — test scripts and validation
+- **[Users Website](https://github.com/SportsTechVeloProject/Product-and-UI)** - eventual user interface
 
-## Status
+## Decisions worth knowing about
 
-Sprint 2 — getting clean velocity out of rotating bar data.
+- **Movesense over a custom IMU board.** Two weeks on our own hardware
+  without a stable connection; switching moved the problem from electronics
+  to analysis, which is what the project is actually about. ⟨ADR-001⟩
+- **Web app rather than native.** ⟨ADR-002 — one line once you've settled
+  the Web Bluetooth question⟩
