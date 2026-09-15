@@ -3,42 +3,24 @@ description: Prep and reflection for a slot with the supervisor
 title: "Supervision — YYYY-MM-DD"
 labels: ["meeting", "supervision"]
 body:
-  - type: input
-    id: when
-    attributes:
-      label: When
-    validations:
-      required: true
-
   - type: textarea
-    id: since
+    id: showing
     attributes:
-      label: Where we are since last time
-      description: Two or three sentences. This is what you say out loud first.
-    validations:
-      required: true
-
-  - type: textarea
-    id: show
-    attributes:
-      label: What we're showing
-      description: >
-        A plot, a demo, a sketch, a number. Decide who presents it and
-        how long it takes.
+      label: Where we are / what we're showing
+      description: A few sentences plus whatever we demo — a plot, a number, a sketch.
       value: |
-        - **What:**
-        - **Who presents:**
-        - **Time needed:**
+        -
     validations:
       required: true
 
   - type: textarea
     id: questions
     attributes:
-      label: Questions for the supervisor
+      label: What we want from him
       description: >
-        Ranked. The slot is short — if you only get through one, which
-        one do you need most?
+        Ranked. If we only get through one, which do we need most?
+        Best ones state a choice and where we're leaning, so he can push
+        back on something concrete.
       value: |
         1.
         2.
@@ -47,47 +29,11 @@ body:
       required: true
 
   - type: textarea
-    id: decision
-    attributes:
-      label: Decision we want input on
-      description: >
-        Optional, but the highest-value use of the slot. State the options
-        and where you're leaning, so he can push back on something concrete
-        rather than being asked "what should we do".
-
-  - type: textarea
-    id: plan
-    attributes:
-      label: Plan for the slot
-      value: |
-        | Min | What |
-        |-----|------|
-        | 0–5 | Status |
-        | 5–15 | Demo |
-        | 15–25 | Questions |
-        | 25–30 | Agree next steps |
-
-  - type: markdown
-    attributes:
-      value: "---\n### Fill in *after* the session"
-
-  - type: textarea
-    id: said
-    attributes:
-      label: What he said
-      description: Especially anything that contradicted what we expected.
-
-  - type: textarea
     id: reflection
     attributes:
-      label: Reflection — what changes because of this
+      label: Reflection — fill in after
       description: >
-        If a direction changed, this text is the Context section of an ADR.
-        Write it while you still remember the reasoning.
-
-  - type: textarea
-    id: actions
-    attributes:
-      label: Actions
+        What he said, especially anything that surprised us, and what
+        changes because of it. Write it the same day.
       value: |
-        - [ ] #
+        -
