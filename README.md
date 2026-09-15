@@ -28,7 +28,7 @@ their velocity and left/right asymmetry.
 
 | Who | Focus |
 |---|---|
-| **Addi** | Scrum master, project management |
+| **Svanberg** | Scrum master, project management |
 | **Arvid**, **Silje** | Data pipeline, analysis, validation |
 | **Hugo**, **Greipur** | UI/UX, backend, physical product |
 
