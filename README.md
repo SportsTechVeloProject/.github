@@ -67,7 +67,7 @@ Coaches report three barriers to using VBT today:
 > **Our research question:** Can two end-mounted IMUs give accurate enough mean concentric velocity for feedback during training, despite irregular barbell rotation?
 
 <details>
-<summary><h4>Why do cheaper sensors struggle? · click to open</h4></summary>
+<summary><h3>Why do cheaper sensors struggle? · click to open</h3></summary>
 <br>
 
 - **Integration drift.** Velocity comes from integrating acceleration, so small errors add up over time.
@@ -109,7 +109,7 @@ Movesense is commercially available, with a 9-axis IMU and Bluetooth Low Energy.
 </table>
 
 <details>
-<summary><h4>Data pipeline in detail · click to open</h4></summary>
+<summary><h3>Data pipeline in detail · click to open</h3></summary>
 <br>
 
 1. **Save.** You press **■ Stop & save**. The web app saves the sensor data and adds a row to the `sessions` table in Supabase.
@@ -130,7 +130,7 @@ Every set is classified by its mean bar speed:
 ![Velocity zones](docs/images/readme/velocity-zones.svg)
 
 <details>
-<summary><h4>Zones as a table · click to open</h4></summary>
+<summary><h3>Zones as a table · click to open</h3></summary>
 <br>
 
 | Zone | Mean velocity | Typical % 1RM | Training effect |
