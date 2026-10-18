@@ -27,7 +27,7 @@
 
 ---
 
-## 🏋️ Why velocity-based training?
+# 🏋️ Why velocity-based training?
 
 <table>
   <tr>
@@ -39,10 +39,10 @@ Traditional programs prescribe load as a fixed percentage of your 1RM. But your 
 
 ✅ **Autoregulate:** load for the day you're actually having<br>
 ✅ **Manage fatigue:** stop a set when bar speed drops too far<br>
-✅ **Estimate 1RM:** without testing a true max [2]<br>
+✅ **Estimate 1RM:** without testing a true max<br>
 ✅ **Train with intent:** a number after every rep makes you push
 
-VBT gives strength gains similar to percentage-based training, at lower training loads [1].
+VBT gives strength gains similar to percentage-based training, at lower training loads.
 
   </td>
     <td width="42%" align="center">
@@ -51,13 +51,13 @@ VBT gives strength gains similar to percentage-based training, at lower training
   </tr>
 </table>
 
-## 🎯 The problem
+# 🎯 The problem
 
-Coaches report three barriers to using VBT today [3]:
+Coaches report three barriers to using VBT today:
 
 <table>
   <tr>
-    <td align="center" width="33%">💸<br><b>Expensive</b><br><sub>The most accurate devices, linear position transducers, cost a lot [4].</sub></td>
+    <td align="center" width="33%">💸<br><b>Expensive</b><br><sub>The most accurate devices, linear position transducers, cost a lot.</sub></td>
     <td align="center" width="33%">🔌<br><b>Hard to use</b><br><sub>Cables and setup get in the way of the lift.</sub></td>
     <td align="center" width="33%">📉<br><b>Limited accuracy</b><br><sub>Cheaper wireless IMUs suffer from drift and bar rotation.</sub></td>
   </tr>
@@ -67,7 +67,7 @@ Coaches report three barriers to using VBT today [3]:
 > **Our research question:** Can two end-mounted IMUs give accurate enough mean concentric velocity for feedback during training, despite irregular barbell rotation?
 
 <details>
-<summary><b>Why do cheaper sensors struggle?</b></summary>
+<summary><h4>Why do cheaper sensors struggle? <sub>· click to open</sub></h4></summary>
 <br>
 
 - **Integration drift.** Velocity comes from integrating acceleration, so small errors add up over time.
@@ -78,7 +78,7 @@ Coaches report three barriers to using VBT today [3]:
 
 ---
 
-## ⚙️ How it works
+# ⚙️ How it works
 
 V-LO puts **one Movesense sensor on each end of the bar**. Using two sensors lets us correct for bar rotation and compare the left and right sides.
 
@@ -90,7 +90,7 @@ V-LO puts **one Movesense sensor on each end of the bar**. Using two sensors let
 
 **From acceleration to velocity**
 
-1. **Orientation:** the Madgwick filter fuses accelerometer and gyroscope data [6]
+1. **Orientation:** the Madgwick filter fuses accelerometer and gyroscope data
 2. **Rep detection:** peaks above a moving-average baseline, checked against a ±50 ms window
 3. **Velocity:** acceleration integrated per rep, starting from zero
 4. **Left vs right:** peak and mean velocity per side, then compared
@@ -102,14 +102,14 @@ V-LO puts **one Movesense sensor on each end of the bar**. Using two sensors let
 
 A custom IMU would mean building our own firmware, Bluetooth stack and enclosure. That time would come out of the data analysis and the user experience, which are our core contributions.
 
-Movesense is commercially available, with a 9-axis IMU and Bluetooth Low Energy [5].
+Movesense is commercially available, with a 9-axis IMU and Bluetooth Low Energy.
 
   </td>
   </tr>
 </table>
 
 <details>
-<summary><b>Data pipeline in detail</b></summary>
+<summary><h4>Data pipeline in detail <sub>· click to open</sub></h4></summary>
 <br>
 
 1. **Save.** You press **■ Stop & save**. The web app saves the sensor data and adds a row to the `sessions` table in Supabase.
@@ -123,14 +123,14 @@ Movesense is commercially available, with a 9-axis IMU and Bluetooth Low Energy 
 
 </details>
 
-### Velocity zones
+## Velocity zones
 
 Every set is classified by its mean bar speed:
 
 ![Velocity zones](docs/images/readme/velocity-zones.svg)
 
 <details>
-<summary><b>Zones as a table</b></summary>
+<summary><h4>Zones as a table <sub>· click to open</sub></h4></summary>
 <br>
 
 | Zone | Mean velocity | Typical % 1RM | Training effect |
@@ -145,7 +145,7 @@ Every set is classified by its mean bar speed:
 
 ---
 
-## 📱 The app
+# 📱 The app
 
 <table>
   <tr>
@@ -182,7 +182,7 @@ Coaches get a team view with training volume, average bar speed per lift, and PR
 
 ---
 
-## 📊 Results
+# 📊 Results
 
 We validated V-LO against a **GymAware linear position transducer**, a gold-standard reference that recorded the same reps.
 
@@ -198,7 +198,7 @@ V-LO's average and peak velocity follow GymAware closely. Estimates are most acc
 
 ---
 
-## 🚀 Get started
+# 🚀 Get started
 
 ```bash
 python -m http.server 8080
@@ -209,7 +209,7 @@ Then open [localhost:8080/vlo.html](http://localhost:8080/vlo.html) in **Chrome 
 > [!WARNING]
 > The analysis runs on Azure, so changes to the analysis code also need a deploy. Check with the team before deploying.
 
-### Recording a set
+## Recording a set
 
 ![How to record a set](docs/images/readme/recording-guide.svg)
 
@@ -217,7 +217,7 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 
 ---
 
-## 🧭 Limitations and roadmap
+# 🧭 Limitations and roadmap
 
 <table>
   <tr>
@@ -247,7 +247,7 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 
 ---
 
-## 📁 Repository
+# 📁 Repository
 
 | Folder | Contents |
 |---|---|
@@ -256,7 +256,7 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 | [`docs/`](docs/) | Documentation, images and detailed READMEs |
 | [`ISSUE_TEMPLATE/`](ISSUE_TEMPLATE/) | Templates for reporting issues |
 
-## 👥 Team
+# 👥 Team
 
 <div align="center">
 
