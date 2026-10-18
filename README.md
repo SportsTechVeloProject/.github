@@ -10,7 +10,9 @@
 ![Analysis](https://img.shields.io/badge/analysis-Azure-0078d4?style=flat-square)
 ![Lifts](https://img.shields.io/badge/lifts-squat_·_bench_·_deadlift-e8875f?style=flat-square)
 
-[Why VBT](#-why-velocity-based-training) · [How it works](#-how-it-works) · [The app](#-the-app) · [Results](#-results) · [Get started](#-get-started) · [Team](#-team)
+[Why VBT](#why-vbt) · [The problem](#the-problem) · [How it works](#how-it-works) · [The app](#the-app) · [Results](#results) · [Get started](#get-started) · [Team](#team)
+
+<sub>Click a section below to open it.</sub>
 
 </div>
 
@@ -27,7 +29,10 @@
 
 ---
 
-# 🏋️ Why velocity-based training?
+<a id="why-vbt"></a>
+<details>
+<summary><h1>🏋️ Why velocity-based training?</h1></summary>
+<br>
 
 <table>
   <tr>
@@ -51,7 +56,34 @@ VBT gives strength gains similar to percentage-based training, at lower training
   </tr>
 </table>
 
-# 🎯 The problem
+## Velocity zones
+
+Every set is classified by its mean bar speed:
+
+![Velocity zones](docs/images/readme/velocity-zones.svg)
+
+<details>
+<summary><h3>Zones as a table · click to open</h3></summary>
+<br>
+
+| Zone | Mean velocity | Typical % 1RM | Training effect |
+|---|---|---|---|
+| 🔵 Starting strength | > 1.30 m/s | bodyweight | Overcoming inertia: jumps and throws |
+| 🟢 Speed-strength | 1.00–1.30 m/s | 20–40% | Speed first, strength second |
+| 🟢 Strength-speed | 0.75–1.00 m/s | 40–60% | Moderately heavy loads, as fast as possible |
+| 🟡 Accelerative strength | 0.50–0.75 m/s | 65–80% | Driving heavy loads as fast as possible |
+| 🟠 Absolute strength | < 0.50 m/s | 80–100% | Maximal force: heavy triples, doubles, singles |
+
+</details>
+
+</details>
+
+---
+
+<a id="the-problem"></a>
+<details>
+<summary><h1>🎯 The problem</h1></summary>
+<br>
 
 Coaches report three barriers to using VBT today:
 
@@ -76,9 +108,14 @@ Coaches report three barriers to using VBT today:
 
 </details>
 
+</details>
+
 ---
 
-# ⚙️ How it works
+<a id="how-it-works"></a>
+<details>
+<summary><h1>⚙️ How it works</h1></summary>
+<br>
 
 V-LO puts **one Movesense sensor on each end of the bar**. Using two sensors lets us correct for bar rotation and compare the left and right sides.
 
@@ -123,29 +160,14 @@ Movesense is commercially available, with a 9-axis IMU and Bluetooth Low Energy.
 
 </details>
 
-## Velocity zones
-
-Every set is classified by its mean bar speed:
-
-![Velocity zones](docs/images/readme/velocity-zones.svg)
-
-<details>
-<summary><h3>Zones as a table · click to open</h3></summary>
-<br>
-
-| Zone | Mean velocity | Typical % 1RM | Training effect |
-|---|---|---|---|
-| 🔵 Starting strength | > 1.30 m/s | bodyweight | Overcoming inertia: jumps and throws |
-| 🟢 Speed-strength | 1.00–1.30 m/s | 20–40% | Speed first, strength second |
-| 🟢 Strength-speed | 0.75–1.00 m/s | 40–60% | Moderately heavy loads, as fast as possible |
-| 🟡 Accelerative strength | 0.50–0.75 m/s | 65–80% | Driving heavy loads as fast as possible |
-| 🟠 Absolute strength | < 0.50 m/s | 80–100% | Maximal force: heavy triples, doubles, singles |
-
 </details>
 
 ---
 
-# 📱 The app
+<a id="the-app"></a>
+<details>
+<summary><h1>📱 The app</h1></summary>
+<br>
 
 <table>
   <tr>
@@ -180,9 +202,14 @@ Coaches get a team view with training volume, average bar speed per lift, and PR
 
 ➡️ **More screenshots:** [Website walkthrough](docs/images/website/README.md)
 
+</details>
+
 ---
 
-# 📊 Results
+<a id="results"></a>
+<details>
+<summary><h1>📊 Results</h1></summary>
+<br>
 
 We validated V-LO against a **GymAware linear position transducer**, a gold-standard reference that recorded the same reps.
 
@@ -196,9 +223,14 @@ We validated V-LO against a **GymAware linear position transducer**, a gold-stan
 
 V-LO's average and peak velocity follow GymAware closely. Estimates are most accurate at lower velocities and drift more for faster movements. The usability figure comes from a preliminary survey.
 
+</details>
+
 ---
 
-# 🚀 Get started
+<a id="get-started"></a>
+<details>
+<summary><h1>🚀 Get started</h1></summary>
+<br>
 
 ```bash
 python -m http.server 8080
@@ -215,9 +247,14 @@ Then open [localhost:8080/vlo.html](http://localhost:8080/vlo.html) in **Chrome 
 
 Standing still at the start gives a clean baseline, gaps between reps help separate them, and a firm rack marks the end of the set.
 
+</details>
+
 ---
 
-# 🧭 Limitations and roadmap
+<a id="limitations"></a>
+<details>
+<summary><h1>🧭 Limitations and roadmap</h1></summary>
+<br>
 
 <table>
   <tr>
@@ -245,9 +282,14 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
   </tr>
 </table>
 
+</details>
+
 ---
 
-# 📁 Repository
+<a id="repository"></a>
+<details>
+<summary><h1>📁 Repository</h1></summary>
+<br>
 
 | Folder | Contents |
 |---|---|
@@ -256,10 +298,71 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 | [`docs/`](docs/) | Documentation, images and detailed READMEs |
 | [`ISSUE_TEMPLATE/`](ISSUE_TEMPLATE/) | Templates for reporting issues |
 
-# 👥 Team
+</details>
 
-<div align="center">
+---
 
-**Arvid · Greipur · Hugo · Silje · Svanberg**
+<a id="team"></a>
+<details>
+<summary><h1>👥 Team</h1></summary>
+<br>
 
-</div>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/arvidaxe"><img src="https://github.com/arvidaxe.png" width="80" alt="Arvid"><br><b>Arvid</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/GreipurGislason"><img src="https://github.com/GreipurGislason.png" width="80" alt="Greipur"><br><b>Greipur</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/HugoPersson01"><img src="https://github.com/HugoPersson01.png" width="80" alt="Hugo"><br><b>Hugo</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/siljekongstorpjohansen"><img src="https://github.com/siljekongstorpjohansen.png" width="80" alt="Silje"><br><b>Silje</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/svanbergaddi"><img src="https://github.com/svanbergaddi.png" width="80" alt="Svanberg"><br><b>Svanberg</b></a>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary><h3>Roles · click to open</h3></summary>
+<br>
+
+<table>
+  <tr>
+    <td colspan="2" align="center">
+
+### 🧭 Scrum master
+[**Svanberg (Addi)**](https://github.com/svanbergaddi)<br>
+Led the sprints and built the data pipeline from Supabase to Azure and back. Worked across both the UI and the code.
+
+  </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+
+### 🎨 UI / UX
+Designed and built the web app: the dashboard, the flow for connecting sensors and picking a lift, and how feedback is shown after each set.
+
+- [**Hugo**](https://github.com/HugoPersson01)
+- [**Greipur**](https://github.com/GreipurGislason)
+
+  </td>
+    <td width="50%" valign="top">
+
+### 🐍 Data and analysis
+Wrote the Python code that processes the sensor data: filtering, orientation, rep detection and velocity estimation.
+
+- [**Silje**](https://github.com/siljekongstorpjohansen)
+- [**Arvid**](https://github.com/arvidaxe)
+
+  </td>
+  </tr>
+</table>
+
+</details>
+
+</details>
