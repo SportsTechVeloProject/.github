@@ -266,9 +266,3 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 <img src="docs/images/readme/male-front-squat.png" width="45%" alt="Front squat">
 
 </div>
-
-<details>
-<summary><b>📚 References</b></summary>
-<br>
-
-</details>
