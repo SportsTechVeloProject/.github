@@ -262,7 +262,4 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 
 **Arvid · Greipur · Hugo · Silje · Svanberg**
 
-<img src="docs/images/readme/female-bench-press.png" width="45%" alt="Bench press">
-<img src="docs/images/readme/male-front-squat.png" width="45%" alt="Front squat">
-
 </div>
