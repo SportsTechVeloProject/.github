@@ -51,6 +51,30 @@ VBT gives strength gains similar to percentage-based training, at lower training
   </tr>
 </table>
 
+</details>
+
+## Velocity zones
+
+Every set is classified by its mean bar speed:
+
+![Velocity zones](docs/images/readme/velocity-zones.svg)
+
+<details>
+<summary><h3>Zones as a table · click to open</h3></summary>
+<br>
+
+| Zone | Mean velocity | Typical % 1RM | Training effect |
+|---|---|---|---|
+| 🔵 Starting strength | > 1.30 m/s | bodyweight | Overcoming inertia: jumps and throws |
+| 🟢 Speed-strength | 1.00–1.30 m/s | 20–40% | Speed first, strength second |
+| 🟢 Strength-speed | 0.75–1.00 m/s | 40–60% | Moderately heavy loads, as fast as possible |
+| 🟡 Accelerative strength | 0.50–0.75 m/s | 65–80% | Driving heavy loads as fast as possible |
+| 🟠 Absolute strength | < 0.50 m/s | 80–100% | Maximal force: heavy triples, doubles, singles |
+
+</details>
+
+---
+
 # 🎯 The problem
 
 Coaches report three barriers to using VBT today:
@@ -120,26 +144,6 @@ Movesense is commercially available, with a 9-axis IMU and Bluetooth Low Energy.
 - **Cold start:** if Azure has been idle, the first set can take 10–30 s.
 - **Retries:** missed sets are resent automatically every minute.
 - **Errors:** if a set can't be analyzed, it shows the reason instead of a result.
-
-</details>
-
-## Velocity zones
-
-Every set is classified by its mean bar speed:
-
-![Velocity zones](docs/images/readme/velocity-zones.svg)
-
-<details>
-<summary><h3>Zones as a table · click to open</h3></summary>
-<br>
-
-| Zone | Mean velocity | Typical % 1RM | Training effect |
-|---|---|---|---|
-| 🔵 Starting strength | > 1.30 m/s | bodyweight | Overcoming inertia: jumps and throws |
-| 🟢 Speed-strength | 1.00–1.30 m/s | 20–40% | Speed first, strength second |
-| 🟢 Strength-speed | 0.75–1.00 m/s | 40–60% | Moderately heavy loads, as fast as possible |
-| 🟡 Accelerative strength | 0.50–0.75 m/s | 65–80% | Driving heavy loads as fast as possible |
-| 🟠 Absolute strength | < 0.50 m/s | 80–100% | Maximal force: heavy triples, doubles, singles |
 
 </details>
 
