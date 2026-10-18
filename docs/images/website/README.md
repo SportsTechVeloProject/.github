@@ -11,27 +11,27 @@ V-Lo turns a Movesense Flash IMU clipped to the bar sleeve into live bar speed, 
 ## Landing page
 
 ### Front page
-![V-Lo front page](/.github/docs/images/website/website_frontpage.png)
+![V-Lo front page](website_frontpage.png)
 
 The hero section introduces the core idea: every rep, measured. The card on the right shows an example rep from a back squat set, with the velocity curve over time and the three key numbers V-Lo reports: peak concentric velocity, mean velocity and velocity loss across the set.
 
 ### How it works
-![How it works](/.github/docs/images/website/website_HIW.png)
+![How it works](website_HIW.png)
 
 Three steps from sensor to decision: clip the Movesense Flash to the bar, lift like normal while the IMU samples at 104 Hz, and let V-Lo tell you when to stop, drop weight or push on once velocity loss crosses your threshold.
 
 ### Training zones
-![Velocity training zones](/.github/docs/images/website/website_zones.png)
+![Velocity training zones](website_zones.png)
 
 Every set is classified into one of five velocity zones from the VBT literature (Bryan Mann, via GymAware), from starting strength (> 1.30 m/s) down to absolute strength (< 0.50 m/s). The zone is decided by the measured mean bar speed, with % of 1RM shown only as a typical reference.
 
 ### Built for powerlifting
-![Scoped to competitive powerlifting](/.github/docs/images/website/website_scope.png)
+![Scoped to competitive powerlifting](website_scope.png)
 
 V-Lo is deliberately focused on competitive powerlifting (squat, bench and deadlift under federation rules) rather than being a general fitness tracker with a barbell mode added on.
 
 ### Pricing
-![Pricing](/.github/docs/images/website/website_sub.png)
+![Pricing](website_sub.png)
 
 V-Lo is a pure software subscription running on the existing Movesense sensor platform, so there is no hardware markup. There are two plans: **Lifter** for your own training and **Coach** for managing a squad, priced per lifter.
 
@@ -40,12 +40,12 @@ V-Lo is a pure software subscription running on the existing Movesense sensor pl
 ## The app
 
 ### Team dashboard
-![Team dashboard](/.github/docs/images/website/website_team.png)
+![Team dashboard](website_team.png)
 
 The team page gives athletes and coaches a quick overview: today's planned session, number of athletes, total volume lifted, this week's volume compared with the recent average, and average bar speed per lift.
 
 ### Team members
-![Coaches and athletes](/.github/docs/images/website/website_atheletes.png)
+![Coaches and athletes](website_atheletes.png)
 
 Coaches and athletes in the team are listed with their join date. From here you can open an athlete's profile, suggest new members, or leave the team.
 
@@ -53,8 +53,8 @@ Coaches and athletes in the team are listed with their join date. From here you 
 
 <table>
   <tr>
-    <td><img src="/.github/docs/images/website/website_PB_back.png" alt="Top PRs back squat"></td>
-    <td><img src="/.github/docs/images/website/website_pb_front.png" alt="Top PRs front squat"></td>
+    <td><img src="website_PB_back.png" alt="Top PRs back squat"></td>
+    <td><img src="website_pb_front.png" alt="Top PRs front squat"></td>
   </tr>
   <tr>
     <td align="center"><em>Back squat</em></td>
