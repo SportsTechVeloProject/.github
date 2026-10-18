@@ -260,6 +260,24 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 
 <div align="center">
 
-**Arvid · Greipur · Hugo · Silje · Svanberg**
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/USERNAME_ARVID"><img src="https://github.com/USERNAME_ARVID.png" width="80" alt="Arvid"><br><b>Arvid</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/USERNAME_GREIPUR"><img src="https://github.com/USERNAME_GREIPUR.png" width="80" alt="Greipur"><br><b>Greipur</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/HugoPersson01"><img src="https://github.com/HugoPersson01.png" width="80" alt="Hugo"><br><b>Hugo</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/USERNAME_SILJE"><img src="https://github.com/USERNAME_SILJE.png" width="80" alt="Silje"><br><b>Silje</b></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/USERNAME_SVANBERG"><img src="https://github.com/USERNAME_SVANBERG.png" width="80" alt="Svanberg"><br><b>Svanberg</b></a>
+    </td>
+  </tr>
+</table>
 
 </div>
