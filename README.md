@@ -258,26 +258,60 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 
 # 👥 Team
 
-<div align="center">
-
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/USERNAME_ARVID"><img src="https://github.com/USERNAME_ARVID.png" width="80" alt="Arvid"><br><b>Arvid</b></a>
+      <a href="https://github.com/arvidaxe"><img src="https://github.com/arvidaxe.png" width="80" alt="Arvid"><br><b>Arvid</b></a>
     </td>
     <td align="center">
-      <a href="https://github.com/USERNAME_GREIPUR"><img src="https://github.com/USERNAME_GREIPUR.png" width="80" alt="Greipur"><br><b>Greipur</b></a>
+      <a href="https://github.com/GreipurGislason"><img src="https://github.com/GreipurGislason.png" width="80" alt="Greipur"><br><b>Greipur</b></a>
     </td>
     <td align="center">
       <a href="https://github.com/HugoPersson01"><img src="https://github.com/HugoPersson01.png" width="80" alt="Hugo"><br><b>Hugo</b></a>
     </td>
     <td align="center">
-      <a href="https://github.com/USERNAME_SILJE"><img src="https://github.com/USERNAME_SILJE.png" width="80" alt="Silje"><br><b>Silje</b></a>
+      <a href="https://github.com/siljekongstorpjohansen"><img src="https://github.com/siljekongstorpjohansen.png" width="80" alt="Silje"><br><b>Silje</b></a>
     </td>
     <td align="center">
-      <a href="https://github.com/USERNAME_SVANBERG"><img src="https://github.com/USERNAME_SVANBERG.png" width="80" alt="Svanberg"><br><b>Svanberg</b></a>
+      <a href="https://github.com/svanbergaddi"><img src="https://github.com/svanbergaddi.png" width="80" alt="Svanberg"><br><b>Svanberg</b></a>
     </td>
   </tr>
 </table>
 
-</div>
+<details>
+<summary><h4>Roles · click to open</h4></summary>
+<br>
+
+<table>
+  <tr>
+    <td colspan="2" align="center">
+
+### 🧭 Scrum master
+[**Svanberg (Addi)**](https://github.com/svanbergaddi)<br>
+Led the sprints and built the data pipeline from Supabase to Azure and back. Worked across both the UI and the code.
+
+  </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+
+### 🎨 UI / UX
+Designed and built the web app: the dashboard, the flow for connecting sensors and picking a lift, and how feedback is shown after each set.
+
+- [**Hugo**](https://github.com/HugoPersson01)
+- [**Greipur**](https://github.com/GreipurGislason)
+
+  </td>
+    <td width="50%" valign="top">
+
+### 🐍 Data and analysis
+Wrote the Python code that processes the sensor data: filtering, orientation, rep detection and velocity estimation.
+
+- [**Silje**](https://github.com/siljekongstorpjohansen)
+- [**Arvid**](https://github.com/arvidaxe)
+
+  </td>
+  </tr>
+</table>
+
+</details>
