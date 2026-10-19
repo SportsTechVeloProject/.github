@@ -215,12 +215,11 @@ We validated V-LO against a **GymAware linear position transducer**, a gold-stan
 <table>
   <tr>
     <td align="center" width="33%"><h2>4</h2><sub>participants, 6 reps in each velocity zone</sub></td>
-    <td align="center" width="33%"><h2>80%</h2><sub>of test users found it easy to set up and use</sub></td>
     <td align="center" width="33%"><h2>Low&nbsp;speed</h2><sub>is where V-LO matches GymAware most closely</sub></td>
   </tr>
 </table>
 
-V-LO's average and peak velocity follow GymAware closely. Estimates are most accurate at lower velocities and drift more for faster movements. The usability figure comes from a preliminary survey.
+V-LO's average and peak velocity follow GymAware closely. Estimates are most accurate at lower velocities and drift more for faster movements.
 
 </details>
 
