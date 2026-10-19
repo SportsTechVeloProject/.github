@@ -220,7 +220,11 @@ We validated V-LO against a **GymAware linear position transducer**, a gold-stan
 </table>
 
 V-LO's average and peak velocity follow GymAware closely. Estimates are most accurate at lower velocities and drift more for faster movements.
-
+The table displays the mean average difference between the gymAware data and the V-LO velocity approximation and the standard deviation. The data is separated by the speed zone the repetitions are performed in 
+| Metric | Absolute Strength MAD | Absolute Strength MAD SD | Speed Strength MAD | Speed Strength MAD SD | Starting Strength MAD | Starting Strength MAD SD |
+|--------|----------------------:|-------------------------:|-------------------:|----------------------:|----------------------:|-------------------------:|
+| Mean velocity [m/s] | 0.03 | 0.04 | 0.05 | 0.06 | 0.33 | 0.17 |
+| Peak velocity [m/s] | 0.02 | 0.02 | 0.06 | 0.03 | 0.21 | 0.13 |
 </details>
 
 ---
