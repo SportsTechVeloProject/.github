@@ -10,7 +10,9 @@
 ![Analysis](https://img.shields.io/badge/analysis-Azure-0078d4?style=flat-square)
 ![Lifts](https://img.shields.io/badge/lifts-squat_·_bench_·_deadlift-e8875f?style=flat-square)
 
-[Why VBT](#-why-velocity-based-training) · [How it works](#-how-it-works) · [The app](#-the-app) · [Results](#-results) · [Get started](#-get-started) · [Team](#-team)
+[Why VBT](#why-vbt) · [The problem](#the-problem) · [How it works](#how-it-works) · [The app](#the-app) · [Results](#results) · [Get started](#get-started) · [Team](#team)
+
+<sub>Click a section below to open it.</sub>
 
 </div>
 
@@ -27,7 +29,10 @@
 
 ---
 
-# 🏋️ Why velocity-based training?
+<a id="why-vbt"></a>
+<details>
+<summary><h1>🏋️ Why velocity-based training?</h1></summary>
+<br>
 
 <table>
   <tr>
@@ -51,8 +56,6 @@ VBT gives strength gains similar to percentage-based training, at lower training
   </tr>
 </table>
 
-</details>
-
 ## Velocity zones
 
 Every set is classified by its mean bar speed:
@@ -73,9 +76,14 @@ Every set is classified by its mean bar speed:
 
 </details>
 
+</details>
+
 ---
 
-# 🎯 The problem
+<a id="the-problem"></a>
+<details>
+<summary><h1>🎯 The problem</h1></summary>
+<br>
 
 Coaches report three barriers to using VBT today:
 
@@ -100,11 +108,16 @@ Coaches report three barriers to using VBT today:
 
 </details>
 
+</details>
+
 ---
 
-# ⚙️ How it works
+<a id="how-it-works"></a>
+<details>
+<summary><h1>⚙️ How it works</h1></summary>
+<br>
 
-V-LO puts **one Movesense sensor on each end of the bar**. Using two sensors lets us correct for bar rotation and compare the left and right sides.
+V-LO puts **one Movesense sensor on each end of the bar**. The velocitydrift of both sensors are compared and the data from the sensor with the most linear drift are used for velocity estimations.
 
 ![Data pipeline from rep to result](docs/images/readme/pipeline.svg)
 
@@ -115,10 +128,9 @@ V-LO puts **one Movesense sensor on each end of the bar**. Using two sensors let
 **From acceleration to velocity**
 
 1. **Orientation:** the Madgwick filter fuses accelerometer and gyroscope data
-2. **Rep detection:** peaks above a moving-average baseline, checked against a ±50 ms window
-3. **Velocity:** acceleration integrated per rep, starting from zero
-4. **Left vs right:** peak and mean velocity per side, then compared
-
+2. **Drift correction:** The velocity drift is approximated as linear. Estimating a gradient coefficient from the first and last half second of data. 
+3. **Rep detection:** Velocity peaks are identified by comparing number of peaks to the known number of repetitions performed. 
+4. **Velocity:** For each repetition the mean velocity is estimated by integrating the acceleration over time for each repetition. Only the velocity data with a value above the approximated drift is used. The peak velocity is estimated using the velocity curves peak height. 
   </td>
     <td width="50%" valign="top">
 
@@ -147,9 +159,14 @@ Movesense is commercially available, with a 9-axis IMU and Bluetooth Low Energy.
 
 </details>
 
+</details>
+
 ---
 
-# 📱 The app
+<a id="the-app"></a>
+<details>
+<summary><h1>📱 The app</h1></summary>
+<br>
 
 <table>
   <tr>
@@ -184,25 +201,38 @@ Coaches get a team view with training volume, average bar speed per lift, and PR
 
 ➡️ **More screenshots:** [Website walkthrough](docs/images/website/README.md)
 
+</details>
+
 ---
 
-# 📊 Results
+<a id="results"></a>
+<details>
+<summary><h1>📊 Results</h1></summary>
+<br>
 
 We validated V-LO against a **GymAware linear position transducer**, a gold-standard reference that recorded the same reps.
 
 <table>
   <tr>
     <td align="center" width="33%"><h2>4</h2><sub>participants, 6 reps in each velocity zone</sub></td>
-    <td align="center" width="33%"><h2>80%</h2><sub>of test users found it easy to set up and use</sub></td>
     <td align="center" width="33%"><h2>Low&nbsp;speed</h2><sub>is where V-LO matches GymAware most closely</sub></td>
   </tr>
 </table>
 
-V-LO's average and peak velocity follow GymAware closely. Estimates are most accurate at lower velocities and drift more for faster movements. The usability figure comes from a preliminary survey.
+V-LO's average and peak velocity follow GymAware closely. Estimates are most accurate at lower velocities and drift more for faster movements.
+The table displays the mean average difference (MAD) between the gymAware data and the V-LO velocity approximation and the standard deviation(MAD SD). The data is separated by the speed zone the repetitions are performed in. 
+| Metric | Absolute Strength MAD | Absolute Strength MAD SD | Speed Strength MAD | Speed Strength MAD SD | Starting Strength MAD | Starting Strength MAD SD |
+|--------|----------------------:|-------------------------:|-------------------:|----------------------:|----------------------:|-------------------------:|
+| Mean velocity [m/s] | 0.03 | 0.04 | 0.05 | 0.06 | 0.33 | 0.17 |
+| Peak velocity [m/s] | 0.02 | 0.02 | 0.06 | 0.03 | 0.21 | 0.13 |
+</details>
 
 ---
 
-# 🚀 Get started
+<a id="get-started"></a>
+<details>
+<summary><h1>🚀 Get started</h1></summary>
+<br>
 
 ```bash
 python -m http.server 8080
@@ -219,9 +249,14 @@ Then open [localhost:8080/vlo.html](http://localhost:8080/vlo.html) in **Chrome 
 
 Standing still at the start gives a clean baseline, gaps between reps help separate them, and a firm rack marks the end of the set.
 
+</details>
+
 ---
 
-# 🧭 Limitations and roadmap
+<a id="limitations"></a>
+<details>
+<summary><h1>🧭 Limitations and roadmap</h1></summary>
+<br>
 
 <table>
   <tr>
@@ -230,7 +265,6 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 **Known limitations**
 
 - Small number of participants
-- Sensitive to sensor placement
 - Unreliable Bluetooth connection
 - Slow first set after Azure is idle
 
@@ -249,9 +283,14 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
   </tr>
 </table>
 
+</details>
+
 ---
 
-# 📁 Repository
+<a id="repository"></a>
+<details>
+<summary><h1>📁 Repository</h1></summary>
+<br>
 
 | Folder | Contents |
 |---|---|
@@ -260,7 +299,14 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 | [`docs/`](docs/) | Documentation, images and detailed READMEs |
 | [`ISSUE_TEMPLATE/`](ISSUE_TEMPLATE/) | Templates for reporting issues |
 
-# 👥 Team
+</details>
+
+---
+
+<a id="team"></a>
+<details>
+<summary><h1>👥 Team</h1></summary>
+<br>
 
 <table>
   <tr>
@@ -283,7 +329,7 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 </table>
 
 <details>
-<summary><h4>Roles · click to open</h4></summary>
+<summary><h3>Roles · click to open</h3></summary>
 <br>
 
 <table>
@@ -317,5 +363,7 @@ Wrote the Python code that processes the sensor data: filtering, orientation, re
   </td>
   </tr>
 </table>
+
+</details>
 
 </details>
