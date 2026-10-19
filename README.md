@@ -117,7 +117,7 @@ Coaches report three barriers to using VBT today:
 <summary><h1>⚙️ How it works</h1></summary>
 <br>
 
-V-LO puts **one Movesense sensor on each end of the bar**. Using two sensors lets us correct for bar rotation and compare the left and right sides.
+V-LO puts **one Movesense sensor on each end of the bar**. The velocitydrift of both sensors are compared and the data from the sensor with the most linear drift are used for velocity estimations.
 
 ![Data pipeline from rep to result](docs/images/readme/pipeline.svg)
 
@@ -128,10 +128,9 @@ V-LO puts **one Movesense sensor on each end of the bar**. Using two sensors let
 **From acceleration to velocity**
 
 1. **Orientation:** the Madgwick filter fuses accelerometer and gyroscope data
-2. **Rep detection:** peaks above a moving-average baseline, checked against a ±50 ms window
-3. **Velocity:** acceleration integrated per rep, starting from zero
-4. **Left vs right:** peak and mean velocity per side, then compared
-
+2. **Drift correction:** The velocity drift is approximated as linear. Estimating a gradient coefficient from the first and last half second of data. 
+3. **Rep detection:** Velocity peaks are identified by comparing number of peaks to the known number of repetitions performed. 
+4. **Velocity:** For each repetition the mean velocity is estimated by integrating the acceleration over time for each repetition. Only the velocity data with a value above the approximated drift is used. The peak velocity is estimated using the velocity curves peak height. 
   </td>
     <td width="50%" valign="top">
 
@@ -263,7 +262,6 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 **Known limitations**
 
 - Small number of participants
-- Sensitive to sensor placement
 - Unreliable Bluetooth connection
 - Slow first set after Azure is idle
 
