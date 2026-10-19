@@ -225,7 +225,6 @@ The table displays the mean average difference (MAD) between the gymAware data a
 |--------|----------------------:|-------------------------:|-------------------:|----------------------:|----------------------:|-------------------------:|
 | Mean velocity [m/s] | 0.03 | 0.04 | 0.05 | 0.06 | 0.33 | 0.17 |
 | Peak velocity [m/s] | 0.02 | 0.02 | 0.06 | 0.03 | 0.21 | 0.13 |
-
 </details>
 
 ---
@@ -266,6 +265,8 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 **Known limitations**
 
 - Small number of participants
+- The participants were not professional powerlifters
+- The evaluation was only done for squats
 - Unreliable Bluetooth connection
 - Slow first set after Azure is idle
 
