@@ -265,6 +265,8 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 **Known limitations**
 
 - Small number of participants
+- The participants were not professional powerlifters
+- The evaluation was only done for squats
 - Unreliable Bluetooth connection
 - Slow first set after Azure is idle
 
