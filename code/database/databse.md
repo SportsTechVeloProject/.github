@@ -1,6 +1,6 @@
 # V-Lo database structure
 
-![V-Lo database structure: people and teams, recordings, and training plans and workouts, with their foreign keys](database-diagram.svg)
+![V-Lo database structure: people and teams, recordings, and training plans and workouts, with their foreign keys](databse.svg)
 
 Supabase (Postgres). Everything belongs to a **person** (`profiles`), people can be grouped into **teams**, and training data comes in two shapes that meet in the middle:
 
