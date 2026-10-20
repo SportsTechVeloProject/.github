@@ -323,45 +323,6 @@
   .stat .desc { color: var(--muted); font-size: 0.92rem; margin-top: 4px; }
   .stat + .stat { margin-top: 26px; }
 
-  /* ---- pricing ---- */
-  .pricing {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-  .plan {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 28px 26px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .plan.featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
-  .plan .tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-  .plan .tag.hl { color: var(--accent); }
-  .plan .name { font-size: 1.15rem; font-weight: 600; }
-  .plan .price { font-family: 'IBM Plex Mono', monospace; font-size: 2rem; }
-  .plan .price span { font-size: 0.95rem; color: var(--muted); font-family: 'IBM Plex Sans', sans-serif; }
-  .plan ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--muted); }
-  .plan ul li::before { content: "—"; color: var(--accent); margin-right: 8px; }
-  .plan .btn-ghost, .plan .btn { margin-top: auto; justify-content: center; }
-
-  /* ---- cta ---- */
-  .cta-band {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 44px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .cta-band h2 { font-size: clamp(1.5rem, 3vw, 2rem); max-width: 22ch; }
-
   /* ---- footer ---- */
   footer { border-top: 1px solid var(--rule); padding-block: 32px 40px; }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
@@ -373,8 +334,6 @@
     .hero { grid-template-columns: 1fr; padding-block: 40px 36px; }
     .steps { grid-template-columns: 1fr; gap: 30px; }
     .who { grid-template-columns: 1fr; }
-    .pricing { grid-template-columns: 1fr; }
-    .cta-band { flex-direction: column; align-items: flex-start; }
     section { padding-block: 42px; }
   }
 
