@@ -4,6 +4,8 @@
 
 **Velocity-based training for powerlifters, built on two off-the-shelf Movesense sensors and a web app for athletes and coaches.**
 
+### [▶ Open the V-LO web app](https://sportstechveloproject.github.io/.github/code/website/)
+
 ![Sensors](https://img.shields.io/badge/sensors-2×_Movesense-7086f5?style=flat-square)
 ![Sampling](https://img.shields.io/badge/sampling-104_Hz-7086f5?style=flat-square)
 ![Backend](https://img.shields.io/badge/backend-Supabase-3ecf8e?style=flat-square)

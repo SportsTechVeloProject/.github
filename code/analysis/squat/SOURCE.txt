@@ -1,0 +1,3 @@
+Copied unchanged from SportsTechVeloProject/Product-testing, Python/Squats/
+branch main, commit b69afd8 2026-10-13 Silje Kongstorp Johansen: Update Squats2.py
+Update with python/sync_data_team.py. Don't edit these files here: change them in Product-testing.

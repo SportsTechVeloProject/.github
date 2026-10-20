@@ -1,0 +1,881 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>V-Lo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/vlo.css?v=15">
+
+<div id="marketingView">
+<nav class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">V-LO<span class="dot">.</span></a>
+    <div class="navlinks">
+      <a href="#how">How it works</a>
+      <a href="#zones">Velocity zones</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <!-- Right-hand group: the profile circle is always the last item, so it sits in the top-right corner. -->
+    <div class="nav-right">
+      <button class="btn-ghost open-auth-btn" type="button" id="navLoginBtn">Log in</button>
+      <a class="btn" href="#cta">Request early access</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+        <svg class="icon-sun" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="1.6"></circle><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="10" y1="1" y2="3.4" x2="10"></line><line x1="10" y1="16.6" y2="19" x2="10"></line><line x1="1" y1="10" x2="3.4" y2="10"></line><line x1="16.6" y1="10" x2="19" y2="10"></line><line x1="3.9" y1="3.9" x2="5.6" y2="5.6"></line><line x1="14.4" y1="14.4" x2="16.1" y2="16.1"></line><line x1="3.9" y1="16.1" x2="5.6" y2="14.4"></line><line x1="14.4" y1="5.6" x2="16.1" y2="3.9"></line></g></svg>
+        <svg class="icon-moon" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" style="display:none"><path fill="currentColor" d="M16.5 12.5A7 7 0 0 1 7.5 3.5a7 7 0 1 0 9 9z"></path></svg>
+      </button>
+      <button type="button" class="profile-btn open-auth-btn is-logged-in" id="navProfileBtn" aria-label="Your account" hidden>
+        <span class="profile-initial" id="navProfileInitial"></span>
+        <img class="profile-photo" id="navProfilePhoto" alt="" hidden>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow">Velocity-based training · for the platform, not the lab</p>
+      <h1>Every rep,<br><em>measured.</em></h1>
+      <p class="lede">A Movesense IMU clips to your bar sleeve. V-Lo turns the raw motion data into bar speed, tempo, and velocity loss — set by set — so you load off what your body did today, not what a spreadsheet guessed on Sunday.</p>
+      <div class="hero-actions">
+        <button class="btn open-auth-btn" type="button">Log in</button>
+        <a class="btn-ghost" href="#how">See how it works ↓</a>
+      </div>
+      <p class="hero-note">No proprietary hardware to buy. Works with the Movesense Flash sensor you already own.</p>
+    </div>
+
+    <div class="trace-card">
+      <div class="trace-head">
+        <span class="label">Set 4 · Back squat · Rep 3</span>
+        <span class="label mono">185 kg</span>
+      </div>
+      <svg class="trace-svg" viewBox="0 0 380 190" width="100%" height="190" role="img" aria-label="Bar velocity trace over one squat repetition, peaking during the concentric phase">
+        <line x1="30" y1="150" x2="360" y2="150" stroke="var(--rule)" stroke-width="1"></line>
+        <line x1="30" y1="20" x2="30" y2="150" stroke="var(--rule)" stroke-width="1"></line>
+        <text x="10" y="24" class="mono" font-size="9" fill="var(--muted)">m/s</text>
+        <text x="330" y="164" class="mono" font-size="9" fill="var(--muted)">time</text>
+        <path d="M30,150 C90,150 100,60 150,58 C190,57 200,140 230,142 C260,144 280,150 360,150" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="3 4"></path>
+        <path class="sweep" d="M30,150 C70,148 95,66 140,60 C170,56 175,150 360,150" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="420" stroke-dashoffset="0"></path>
+        <circle cx="140" cy="60" r="4" fill="var(--accent)"></circle>
+        <text x="148" y="52" class="mono" font-size="10" fill="var(--fg)">0.71</text>
+      </svg>
+      <div class="trace-readout">
+        <div>
+          <div class="v">0.71</div>
+          <div class="k">peak concentric m/s</div>
+        </div>
+        <div>
+          <div class="v">0.54</div>
+          <div class="k">mean velocity m/s</div>
+        </div>
+        <div>
+          <div class="v">12%</div>
+          <div class="k">velocity loss, set</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">How it works</p>
+        <h2>Three steps, zero lab coat.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="n mono">01</div>
+          <h3>Clip it to the bar</h3>
+          <p>The Movesense Flash snaps into a low-profile sleeve mount. Under 10 grams, no cables, pairs once over Bluetooth.</p>
+        </div>
+        <div class="step">
+          <div class="n mono">02</div>
+          <h3>Lift like normal</h3>
+          <p>The sensor's onboard IMU samples acceleration at 104 Hz. V-Lo integrates it into bar position and velocity in real time, rep by rep.</p>
+        </div>
+        <div class="step">
+          <div class="n mono">03</div>
+          <h3>Autoregulate the set</h3>
+          <p>When velocity loss crosses your threshold, V-Lo tells you to stop, drop weight, or push on — before the bar speed does it for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="zones">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Training zones</p>
+        <h2>Load by bar speed, not by feel.</h2>
+        <p>V-Lo classifies every rep against published velocity-based training zones, calibrated per lift and per lifter over time.</p>
+      </div>
+      <div class="zones-wrap">
+        <table class="zones">
+          <thead>
+            <tr><th>Zone</th><th>Mean velocity</th><th>% of 1RM</th><th>Training effect</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="swatch" style="background:var(--zone-1)"></span>Starting strength</td><td class="range">&gt; 1.30 m/s</td><td class="range">bodyweight</td><td>Overcoming inertia from a dead stop: jumps and throws</td></tr>
+            <tr><td><span class="swatch" style="background:var(--zone-2)"></span>Speed-strength</td><td class="range">1.00 – 1.30 m/s</td><td class="range">20–40%</td><td>Speed first, strength second: light loads, fast</td></tr>
+            <tr><td><span class="swatch" style="background:var(--zone-3)"></span>Strength-speed</td><td class="range">0.75 – 1.00 m/s</td><td class="range">40–60%</td><td>Moderately heavy loads, as fast as possible</td></tr>
+            <tr><td><span class="swatch" style="background:var(--zone-4)"></span>Accelerative strength</td><td class="range">0.50 – 0.75 m/s</td><td class="range">65–80%</td><td>Driving heavy loads as fast as possible</td></tr>
+            <tr><td><span class="swatch" style="background:var(--zone-5)"></span>Absolute strength</td><td class="range">&lt; 0.50 m/s</td><td class="range">80–100%</td><td>Maximal force: heavy triples, doubles, singles</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="zones-note">The five velocity zones from the VBT literature (Bryan Mann, via GymAware), judged on each set’s average bar speed and the same for squat, bench and deadlift. % of 1RM is typical, not a rule: the measured speed decides the zone.</p>
+    </div>
+  </section>
+
+  <section id="who">
+    <div class="wrap who">
+      <div>
+        <p class="eyebrow">Built for the platform</p>
+        <h2>Scoped to competitive powerlifting, on purpose.</h2>
+        <div class="prose" style="margin-top:16px;">
+          <p>V-Lo isn't a general fitness tracker with a barbell mode bolted on. Every zone, cue, and report is written for lifters training toward a total — squat, bench, deadlift — under federation rules, not for generic strength training.</p>
+        </div>
+      </div>
+      <div>
+        <div class="stat">
+          <div class="num mono">58,000+</div>
+          <div class="desc">competitive lifters post results through OpenPowerlifting-tracked federations each year</div>
+        </div>
+        <div class="stat">
+          <div class="num mono">104 Hz</div>
+          <div class="desc">IMU sampling rate — fine enough to resolve velocity loss within a single rep</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Pricing</p>
+        <h2>Software subscription. No hardware markup.</h2>
+        <p>V-Lo runs on the Movesense sensor platform — we don't manufacture hardware, so there's no hardware margin baked into your bill.</p>
+      </div>
+      <div class="pricing">
+        <div class="plan">
+          <span class="tag">Lifter</span>
+          <span class="name">For your own training</span>
+          <span class="price mono">149 kr<span>/month</span></span>
+          <ul>
+            <li>Live velocity &amp; tempo per rep</li>
+            <li>Personal zone calibration</li>
+            <li>Set-by-set autoregulation cues</li>
+            <li>Training log export</li>
+          </ul>
+          <a class="btn-ghost" href="#cta">Start as a lifter</a>
+        </div>
+        <div class="plan featured">
+          <span class="tag hl">Coach</span>
+          <span class="name">For managing a squad</span>
+          <span class="price mono">89 kr<span>/lifter · month</span></span>
+          <ul>
+            <li>Everything in Lifter, per athlete</li>
+            <li>Squad dashboard across sessions</li>
+            <li>Meet-week readiness flags</li>
+            <li>Shared coaching notes</li>
+          </ul>
+          <a class="btn" href="#cta">Talk to us about your squad</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rawdata">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">From the database · work in progress</p>
+        <h2>A real recorded set.</h2>
+        <p>Pulled live from Supabase, straight off a Movesense sensor, not the fictional demo above.</p>
+      </div>
+      <div class="chart-card">
+        <div class="chart-head">
+          <h3>Vertical bar velocity — raw session</h3>
+          <div class="chart-head-right">
+            <button class="btn-ghost" id="loadRawBtn" type="button">Load session</button>
+          </div>
+        </div>
+        <p class="chart-caption" id="rawStatus">Not loaded yet — click "Load session" to fetch it from Supabase.</p>
+        <svg id="rawChart" viewBox="0 0 640 260" role="img" aria-label="Vertical velocity over time for the left and right sensor, from one real recorded session" style="width:100%;height:auto;overflow:visible;margin-top:12px;"></svg>
+        <div class="chart-legend two" style="margin-top:10px;">
+          <span><i style="background:var(--chart-left)"></i>Left sleeve</span>
+          <span><i style="background:var(--chart-right)"></i>Right sleeve</span>
+        </div>
+        <p class="chart-caption">Raw, unprocessed sensor output — every point is one sample's vertical velocity over time. It isn't aligned into reps or a lift-cycle percentage yet, that's the next step; this card just proves the data is real and the fetch works.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Be in the first cohort on the platform.</h2>
+        <a class="btn" href="#top">Request early access</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top" style="font-size:1.05rem;">V-LO<span class="dot">.</span></a>
+      <p class="fine" style="margin-top:6px;">A SportTech course project, built on the Movesense sensor platform.</p>
+    </div>
+    <div class="plates" aria-hidden="true">
+      <span style="background:#C0392B"></span>
+      <span style="background:#2247D6"></span>
+      <span style="background:#E8C158"></span>
+      <span style="background:#2E7D32"></span>
+      <span style="background:#EDEAE2; border:1px solid var(--border);"></span>
+    </div>
+  </div>
+</footer>
+</div><!-- /marketingView -->
+
+
+
+<div id="appView" hidden>
+  <header class="app-top">
+    <div class="wrap app-top-row">
+      <a class="logo" href="#" id="exitDemo">V-LO<span class="dot">.</span></a>
+      <!-- Middle strip scrolls sideways on narrow screens; logo and the right-hand buttons stay put. -->
+      <div class="app-top-middle">
+        <nav class="applinks" role="tablist" id="exTabs">
+          <button class="apptab" data-ex="squat" role="tab" type="button">Squat</button>
+          <button class="apptab" data-ex="bench" role="tab" type="button">Bench Press</button>
+          <button class="apptab" data-ex="deadlift" role="tab" type="button">Deadlift</button>
+          <button class="apptab" data-view="plans" role="tab" type="button">Plans</button>
+        </nav>
+        <button type="button" class="demo-badge team-badge" id="teamBadge">No team assigned</button>
+        <span class="demo-badge">Demo · fictional data</span>
+      </div>
+      <div class="app-top-right">
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="1.6"></circle><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="10" y1="1" y2="3.4" x2="10"></line><line x1="10" y1="16.6" y2="19" x2="10"></line><line x1="1" y1="10" x2="3.4" y2="10"></line><line x1="16.6" y1="10" x2="19" y2="10"></line><line x1="3.9" y1="3.9" x2="5.6" y2="5.6"></line><line x1="14.4" y1="14.4" x2="16.1" y2="16.1"></line><line x1="3.9" y1="16.1" x2="5.6" y2="14.4"></line><line x1="14.4" y1="5.6" x2="16.1" y2="3.9"></line></g></svg>
+          <svg class="icon-moon" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" style="display:none"><path fill="currentColor" d="M16.5 12.5A7 7 0 0 1 7.5 3.5a7 7 0 1 0 9 9z"></path></svg>
+        </button>
+        <button type="button" class="profile-btn" id="profileBtn" aria-label="Log in">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.4-3.6 4.2-5.4 7.5-5.4s6.1 1.8 7.5 5.4"/></svg>
+          <span class="profile-initial" id="profileInitial" hidden></span>
+          <img class="profile-photo" id="profilePhoto" alt="" hidden>
+          <span class="profile-dot" id="profileDot" hidden></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap app-body">
+
+   <section class="invite-inbox" id="inviteInbox" hidden aria-live="polite">
+     <p class="eyebrow">Team invites</p>
+     <div class="invite-list" id="inviteList"></div>
+   </section>
+
+   <section class="sensor-bar" id="sensorBar">
+     <div class="sensor-bar-head">
+       <div>
+         <p class="eyebrow">Sensors</p>
+         <p class="sensor-summary" id="sensorSummary">No sensors connected</p>
+       </div>
+       <div class="sensor-actions">
+         <button class="btn-ghost" type="button" data-connect="left">Connect left</button>
+         <button class="btn-ghost" type="button" data-connect="right">Connect right</button>
+         <label class="sensor-sim"><input type="checkbox" id="simToggle"> Simulate</label>
+       </div>
+     </div>
+     <div class="sensor-grid">
+       <div class="sensor-card" data-sensor="left">
+         <div class="sensor-card-head">
+           <span class="sensor-dot" aria-hidden="true"></span>
+           <span class="sensor-label">Left sleeve</span>
+           <button class="sensor-drop" type="button" data-disconnect="left" hidden>Disconnect</button>
+         </div>
+         <p class="sensor-device mono">—</p>
+         <p class="sensor-readout mono">waiting for data</p>
+       </div>
+       <div class="sensor-card" data-sensor="right">
+         <div class="sensor-card-head">
+           <span class="sensor-dot" aria-hidden="true"></span>
+           <span class="sensor-label">Right sleeve</span>
+           <button class="sensor-drop" type="button" data-disconnect="right" hidden>Disconnect</button>
+         </div>
+         <p class="sensor-device mono">—</p>
+         <p class="sensor-readout mono">waiting for data</p>
+       </div>
+     </div>
+     <p class="chart-caption" id="sensorNote"></p>
+   </section>
+
+   <div id="exerciseView">
+
+    <section class="app-hero">
+      <div>
+        <p class="eyebrow" id="exEyebrow">Squat</p>
+        <h2 id="exHeading">Est. 1RM 140 kg</h2>
+        <p class="log-note" id="exNotice" hidden></p>
+        <p class="exit-link"><a href="#" id="exitDemo2">← Back to overview</a></p>
+      </div>
+      <form class="log-form" id="logForm">
+        <label for="logWeight">Log a set</label>
+        <div class="log-row">
+          <input type="number" id="logWeight" inputmode="decimal" step="0.5" min="1" placeholder="Weight (kg)" required>
+          <button class="btn" type="submit">Log set</button>
+        </div>
+        <p class="log-note">Just enter the load — V-Lo counts reps, bar speed and bar path from the sensor automatically.</p>
+      </form>
+    </section>
+
+    <p class="set-context" id="setContext"></p>
+
+    <section class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-head">
+          <h3>Bar speed by lift cycle</h3>
+          <div class="chart-head-right">
+            <div class="chart-legend" id="velLegend"></div>
+          </div>
+        </div>
+        <div class="chart-visual" data-chart="velocity" role="button" tabindex="0" aria-label="Enlarge: bar speed by lift cycle">
+          <svg id="velChart" viewBox="0 0 640 260" role="img" aria-label="Bar speed across the lift cycle, one line per rep"></svg>
+        </div>
+        <p class="chart-caption" id="velCaption">Every rep in the selected set, aligned on one lift cycle instead of time. Colour shows each rep's training zone; the dot is its top speed.</p>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-head">
+          <h3>Bar path — left vs right</h3>
+          <div class="chart-head-right">
+            <div class="rep-pills" id="pathPills"></div>
+          </div>
+        </div>
+        <div class="chart-visual" data-chart="path" role="button" tabindex="0" aria-label="Enlarge: bar path left vs right">
+          <svg id="pathChart" viewBox="0 0 640 260" role="img" aria-label="Vertical bar position across the lift cycle for the left and right sleeve"></svg>
+        </div>
+        <div class="chart-legend two">
+          <span><i style="background:var(--chart-left)"></i>Left sleeve</span>
+          <span><i style="background:var(--chart-right)"></i>Right sleeve</span>
+        </div>
+        <p class="chart-caption" id="pathCaption">How high each end of the bar is through one rep. Where the two lines separate, one side is lower and the bar is tilting. Pick a rep above the chart.</p>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-head">
+          <h3>Bar path — front vs back</h3>
+          <div class="chart-head-right">
+            <div class="chart-legend" id="driftLegend"></div>
+          </div>
+        </div>
+        <div class="chart-visual" data-chart="drift" role="button" tabindex="0" aria-label="Enlarge: bar path front vs back">
+          <svg id="driftChart" viewBox="0 0 640 260" role="img" aria-label="Horizontal bar drift across the lift cycle, one line per rep"></svg>
+        </div>
+        <p class="chart-caption" id="driftCaption"></p>
+      </div>
+    </section>
+
+    <section class="zone-readout">
+      <div class="head-row">
+        <h3>Training effect, this set</h3>
+        <span class="mono muted-small" id="setSummary"></span>
+      </div>
+      <div class="rep-zones" id="repZones"></div>
+    </section>
+
+    <section class="history">
+      <h3>History</h3>
+      <div class="history-wrap">
+        <table class="history-table" id="historyTable">
+          <thead>
+            <tr><th>Session</th><th>Weight</th><th>Reps</th><th>Mean velocity</th><th>Zone</th></tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+   </div><!-- /exerciseView -->
+
+   <div id="plansView" hidden>
+
+    <!-- Logged in: switch between your own training and the plan builder (training.js). -->
+    <div class="plans-switch" id="plansSwitch" role="tablist" aria-label="Plans" hidden>
+      <button type="button" role="tab" id="plansTabTraining" aria-selected="true">My training</button>
+      <button type="button" role="tab" id="plansTabBuilder" aria-selected="false">Plan builder</button>
+    </div>
+
+    <div id="trainingView" hidden>
+      <section class="app-hero">
+        <div>
+          <p class="eyebrow" id="trainingEyebrow">My training</p>
+          <h2 id="trainingHeading">Your workouts</h2>
+          <p class="exit-link" id="trainingBackRow" hidden><a href="#" id="trainingBack">← Back to my own training</a></p>
+        </div>
+        <div class="training-hero-actions">
+          <button class="btn-ghost" type="button" id="freeWorkoutBtn">Start a free workout</button>
+          <p class="log-note">For days without a plan, e.g. active recovery.</p>
+        </div>
+      </section>
+      <div class="team-notice training-pending" id="trainingPending" hidden></div>
+      <p class="log-note training-status" id="trainingStatus"></p>
+      <div class="training-layout" id="trainingLayout" hidden>
+        <div class="training-side">
+          <div class="training-cal" id="trainingCalendar"></div>
+          <nav class="training-list" id="trainingList" aria-label="Workouts"></nav>
+        </div>
+        <section class="training-day" id="trainingDay" aria-live="polite"></section>
+      </div>
+    </div>
+
+    <div id="planBuilderView">
+
+    <section class="app-hero">
+      <div>
+        <p class="eyebrow">Training plans</p>
+        <h2>Drop a plan in, read it as a schedule</h2>
+        <p class="exit-link"><a href="#" id="exitDemo3">← Back to overview</a></p>
+      </div>
+      <div class="log-form">
+        <label for="planName">Plan name</label>
+        <div class="log-row">
+          <input type="text" id="planName" placeholder="e.g. Peaking block — 6 weeks">
+        </div>
+        <p class="log-note">Everything is parsed in your browser. Nothing is uploaded yet.</p>
+      </div>
+    </section>
+
+    <!-- Coaches only (coachplans.js): the team's saved plans, and assigning one to an athlete. -->
+    <section class="team-card coach-plans" id="coachPlans" hidden>
+      <div class="team-card-head">
+        <div>
+          <p class="eyebrow">Your team</p>
+          <h3>Team plans</h3>
+        </div>
+      </div>
+      <p class="log-note" id="coachPlansStatus"></p>
+      <ul class="people-list" id="coachPlanList"></ul>
+
+      <div class="assign-panel" id="assignPanel" hidden>
+        <h4 id="assignTitle">Assign plan</h4>
+        <div class="assign-grid">
+          <label class="assign-field">
+            <span>Athlete</span>
+            <select class="team-select" id="assignAthlete"></select>
+          </label>
+          <label class="assign-field">
+            <span>Start date</span>
+            <input class="team-select" type="date" id="assignStart">
+          </label>
+          <div class="assign-field">
+            <span>Training days</span>
+            <div class="weekday-picks" id="assignWeekdays" role="group" aria-label="Training weekdays"></div>
+          </div>
+        </div>
+        <p class="log-note" id="assignNote"></p>
+        <div class="assign-preview" id="assignPreview"></div>
+        <div class="plan-actions">
+          <button class="btn" type="button" id="assignConfirmBtn">Assign plan</button>
+          <button class="btn-ghost" type="button" id="assignCancelBtn">Cancel</button>
+        </div>
+        <h4 class="assign-current-title" id="assignCurrentTitle" hidden>Already assigned</h4>
+        <ul class="people-list" id="assignCurrent"></ul>
+      </div>
+    </section>
+
+    <section class="plan-intake">
+      <div class="plan-drop" id="planDrop" tabindex="0" role="button" aria-label="Drop a plan file here, or click to choose a file">
+        <p class="plan-drop-title">Drop a plan here</p>
+        <p class="plan-drop-sub"><span class="mono">.docx</span> · <span class="mono">.xlsx</span> · <span class="mono">.csv</span> · <span class="mono">.txt</span> · <span class="mono">.md</span><br>…or click to browse, or paste the text below.</p>
+        <input type="file" id="planFile" accept=".txt,.md,.csv,.docx,.xlsx,.xlsm,text/plain,text/markdown,text/csv,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+      </div>
+
+      <div class="plan-paste">
+        <label for="planText">Paste a plan</label>
+        <textarea id="planText" spellcheck="false" placeholder="Week 1&#10;Day 1 — Heavy&#10;Back Squat 5x3 @140kg @31X1&#10;Bench Press 4x5 @85kg&#10;Deadlift 3x2 @85% // belt on"></textarea>
+        <div class="plan-actions">
+          <button class="btn" type="button" id="planParseBtn">Read plan</button>
+          <button class="btn" type="button" id="planSaveTeamBtn" hidden>Save to team</button>
+          <button class="btn-ghost" type="button" id="planTemplateBtn">Download coach template</button>
+          <button class="btn-ghost" type="button" id="planSampleBtn">Load example</button>
+          <button class="btn-ghost" type="button" id="planClearBtn">Clear</button>
+        </div>
+        <p class="log-note" id="planStatus">No plan loaded.</p>
+      </div>
+    </section>
+
+    <section class="plan-format">
+      <details id="planFormatHelp">
+        <summary>What format does the plan need to be in?</summary>
+        <div class="plan-format-body">
+          <p>Short answer: the format is forgiving. One exercise per line is the only hard rule. Everything else is optional and can be written in the order you like — the parser picks tokens out of the line and treats whatever is left as the exercise name.</p>
+          <table class="plan-format-table">
+            <thead><tr><th>You write</th><th>It reads as</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">Week 3</td><td>Starts a new week</td></tr>
+              <tr><td class="mono">Day 2 — Heavy</td><td>Starts a new day (also <span class="mono">Monday</span>, or any line ending in <span class="mono">:</span>)</td></tr>
+              <tr><td class="mono">5x3</td><td>5 sets of 3 reps (<span class="mono">5 x 3-5</span> and <span class="mono">3,3,2</span> work too)</td></tr>
+              <tr><td class="mono">@140kg</td><td>Absolute load (<span class="mono">315lb</span> converts)</td></tr>
+              <tr><td class="mono">@85%</td><td>Percentage of your estimated 1RM</td></tr>
+              <tr><td class="mono">@RPE8</td><td>Rate of perceived exertion</td></tr>
+              <tr><td class="mono">@31X1</td><td>Tempo — see below</td></tr>
+              <tr><td class="mono">// belt on</td><td>A note (brackets work too)</td></tr>
+            </tbody>
+          </table>
+          <p class="plan-format-note"><strong>Tempo</strong> uses the standard four-character notation: <span class="mono">eccentric · pause · concentric · pause</span>, in seconds, where <span class="mono">X</span> means "as fast as you can". So <span class="mono">33X0</span> is three seconds down, three seconds held in the bottom, explosive up, no pause at the top. For the deadlift the order flips to concentric-first, because the pull is the first thing that happens.</p>
+          <p class="plan-format-note"><strong>Word and Excel</strong> files are read the same way. A table with headers — <span class="mono">Exercise</span>, <span class="mono">Sets</span>, <span class="mono">Reps</span>, <span class="mono">Load</span>, <span class="mono">Tempo</span>, <span class="mono">Notes</span>, plus optional <span class="mono">Week</span> and <span class="mono">Day</span> columns — is read column by column. A table with no headers is read as a grid: labels along the top become days, labels down the side become weeks, and each cell is an exercise. Word headings and Excel sheet names become week and day labels too. Whatever is extracted lands in the box on the right, so you can correct it before it's saved.</p>
+          <p class="plan-format-note">Anything the parser can't place is listed underneath the plan rather than silently dropped, so you can see exactly what it missed.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="plan-output" id="planOutput" hidden>
+      <div class="head-row">
+        <h3>Plan overview</h3>
+        <span class="mono muted-small" id="planSummary"></span>
+      </div>
+      <div id="planBlock" hidden></div>
+      <div id="planWeeks"></div>
+      <div class="plan-unparsed" id="planUnparsed" hidden>
+        <h4>Lines we couldn't read</h4>
+        <ul id="planUnparsedList"></ul>
+      </div>
+    </section>
+
+    </div><!-- /planBuilderView -->
+   </div><!-- /plansView -->
+
+   <div id="teamView" hidden>
+
+    <section class="app-hero team-hero">
+      <div>
+        <div class="team-title-row">
+          <!-- Team picture (members only), or the team's initial in its colour. -->
+          <span class="team-logo" id="teamLogo" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow" id="teamEyebrow">Team</p>
+            <h2 id="teamHeading">Team</h2>
+          </div>
+        </div>
+        <!-- Coaches/admins: team picture and colour. -->
+        <button type="button" class="text-link team-look-toggle" id="teamLookToggle" hidden>Edit team look</button>
+        <div class="team-look" id="teamLookPanel" hidden>
+          <p class="team-desc-label">Team picture · only team members see it</p>
+          <div class="log-row">
+            <button type="button" class="btn-ghost" id="teamPhotoBtn">Upload picture</button>
+            <button type="button" class="btn-ghost" id="teamPhotoRemove" hidden>Remove picture</button>
+            <input type="file" id="teamPhotoInput" accept="image/jpeg,image/png,image/webp" hidden>
+          </div>
+          <p class="team-desc-label" style="margin-top:14px;">Team colour</p>
+          <div class="color-swatches" id="teamColorSwatches" role="radiogroup" aria-label="Team colour"></div>
+          <p class="log-note" id="teamLookStatus"></p>
+          <button type="button" class="text-link" id="teamLookDone">Done</button>
+        </div>
+        <!-- Like a profile bio: public text first, members-only text below it. -->
+        <div class="team-desc team-desc-public" data-desc="public_description" hidden></div>
+        <div class="team-desc team-desc-private" data-desc="private_description" hidden></div>
+        <p class="exit-link"><a href="#" id="teamBack">← Back to training</a></p>
+      </div>
+
+      <!-- Today's session: your plan for today (athletes), or who has a
+           session today and who has trained (coaches/admins). -->
+      <div class="team-card" id="todayCard" hidden>
+        <div class="team-card-head">
+          <div>
+            <p class="eyebrow" id="todayEyebrow">Today</p>
+            <h3 id="todayTitle">Today's session</h3>
+          </div>
+        </div>
+        <p class="chart-caption" id="todaySummary"></p>
+        <div id="todayBody"></div>
+      </div>
+    </section>
+
+    <p class="team-notice" id="teamNotice" hidden></p>
+
+    <!-- Not in a team (or logged out): message + team search -->
+    <div id="teamNone" class="team-stack" hidden>
+      <div class="team-card">
+        <p class="team-empty-msg" id="teamNoneMsg">You are not a member of a team yet, you can still work out on your own!</p>
+      </div>
+      <div class="team-card" id="teamSearchCard">
+        <h3>Find a team</h3>
+        <p class="chart-caption">Search by team name and ask to join. The team's coaches decide whether to let you in.</p>
+        <div class="log-row" style="margin-top:12px;">
+          <input type="search" id="teamSearchInput" placeholder="Team name" autocomplete="off" aria-label="Search teams">
+        </div>
+        <div class="search-results" id="teamSearchResults"></div>
+      </div>
+    </div>
+
+    <!-- In a team -->
+    <div id="teamMain" class="team-stack" hidden>
+
+      <!-- Only shown to coaches/admins while someone is waiting. -->
+      <div class="team-card" id="joinRequestsCard" hidden>
+        <h3>Join requests <span class="count-badge" id="joinRequestCount"></span></h3>
+        <p class="chart-caption">People asking to join. Accept to add them as athletes.</p>
+        <ul class="people-list" id="joinRequestList"></ul>
+      </div>
+
+      <div class="team-stats" id="teamStats"></div>
+
+      <!-- Top PRs: per exercise and speed zone, everyone's best sensor-recorded set. -->
+      <div class="team-card" id="topPrsCard">
+        <h3>Top PRs</h3>
+        <p class="chart-caption">The 3 heaviest sets in each speed zone, one per athlete (their best). Only sets recorded with the sensors count, since they have a measured bar speed.</p>
+        <div id="topPrs"></div>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <h3>Coaches</h3>
+          <ul class="people-list" id="coachList"></ul>
+        </div>
+        <div class="team-card">
+          <h3>Athletes</h3>
+          <ul class="people-list" id="athleteList"></ul>
+        </div>
+      </div>
+
+      <!-- Coaches/admins only: the team's latest training, newest first. -->
+      <div class="team-card" id="activityCard" hidden>
+        <h3>Recent activity</h3>
+        <p class="chart-caption">The team's latest training, grouped per person and exercise. Only coaches and admins see this.</p>
+        <ul class="people-list" id="activityList"></ul>
+      </div>
+
+      <section class="team-card" id="athleteProgress" hidden>
+        <div class="team-card-head">
+          <div>
+            <p class="eyebrow">Progress</p>
+            <h3 id="progressName"></h3>
+          </div>
+          <div class="person-actions">
+            <button type="button" class="btn-ghost" id="progressTraining">See their training</button>
+            <button type="button" class="btn-ghost" id="progressClose">Close</button>
+          </div>
+        </div>
+        <div class="team-stats" id="progressSummary"></div>
+        <!-- One chart per recorded lift: average set speed over time. -->
+        <div class="progress-charts" id="progressCharts"></div>
+        <div class="history-wrap" style="margin-top:16px;">
+          <table class="history-table progress-table">
+            <thead><tr><th>Date</th><th>Exercise</th><th>Load</th><th>Reps</th><th>Mean speed</th><th>Fastest rep</th></tr></thead>
+            <tbody id="progressRows"></tbody>
+          </table>
+        </div>
+        <p class="log-note" id="progressStatus"></p>
+      </section>
+
+      <div class="team-card" id="addPeopleCard">
+        <div class="team-card-head">
+          <h3 id="addPeopleTitle">Add athlete</h3>
+          <button type="button" class="btn-ghost" id="addPeopleToggle" aria-expanded="false" aria-controls="addPeopleBody">+ Add people</button>
+        </div>
+        <div id="addPeopleBody" hidden>
+        <p class="chart-caption" id="addPeopleHint"></p>
+        <div class="log-row" style="margin-top:12px;">
+          <input type="search" id="userSearchInput" placeholder="Their name or exact email" autocomplete="off" aria-label="Search people">
+        </div>
+        <p class="log-note" style="margin-top:6px;">Type at least 2 letters, then press the button next to their name. They'll see it in V-Lo straight away.</p>
+        <div class="search-results" id="userSearchResults"></div>
+
+        <ul class="people-list" id="sentInviteList"></ul>
+
+        <div class="invite-link-box">
+          <p class="chart-caption" style="margin-top:0;"><strong>No V-Lo account yet?</strong> Create a link and send it to them yourself (text, email, chat). The link alone doesn't notify anyone.</p>
+          <div class="log-row" style="margin-top:8px;">
+            <select id="inviteRoleSelect" class="team-select">
+              <option value="member">As athlete</option>
+              <option value="coach">As coach</option>
+            </select>
+            <button class="btn-ghost" type="button" id="createInviteBtn">Create invite link</button>
+          </div>
+          <div class="log-row" id="inviteLinkRow" style="margin-top:8px;" hidden>
+            <input type="text" id="inviteLinkOut" readonly aria-label="Invite link">
+            <button class="btn-ghost" type="button" id="copyInviteBtn">Copy</button>
+          </div>
+          <p class="log-note" id="inviteStatus"></p>
+        </div>
+        </div><!-- /addPeopleBody -->
+      </div>
+
+      <!-- Everyone: leave the team (with a confirmation step). -->
+      <div class="team-leave">
+        <button type="button" class="text-link danger-link" id="leaveTeamBtn">Leave team</button>
+        <div class="team-confirm" id="leaveTeamConfirm" hidden>
+          <p id="leaveTeamText"></p>
+          <div class="log-row">
+            <button type="button" class="btn-danger" id="leaveTeamYes">Leave team</button>
+            <button type="button" class="btn-ghost" id="leaveTeamNo">Cancel</button>
+          </div>
+          <p class="log-note" id="leaveTeamStatus"></p>
+        </div>
+      </div>
+
+    </div>
+   </div><!-- /teamView -->
+
+  </div>
+
+  <div class="zone-modal-overlay" id="zoneModalOverlay" hidden>
+    <div class="zone-modal" role="dialog" aria-modal="true" aria-labelledby="zoneModalTitle">
+      <button type="button" class="zone-modal-close" id="zoneModalClose" aria-label="Close">×</button>
+      <div class="zone-modal-tabs" id="zoneModalTabs"></div>
+      <div class="zone-modal-body">
+        <p class="eyebrow" id="zoneModalRange"></p>
+        <h3 id="zoneModalTitle"></h3>
+        <p id="zoneModalDesc"></p>
+        <p class="zone-modal-benefit"><strong>Why it matters: </strong><span id="zoneModalBenefit"></span></p>
+        <table class="zone-parts">
+          <thead><tr><th>Zone</th><th>Bar speed</th><th>% of 1RM</th></tr></thead>
+          <tbody id="zoneModalParts"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-modal-overlay" id="chartModalOverlay" hidden>
+    <button type="button" class="chart-nav-arrow chart-nav-prev" id="chartTypePrev" aria-label="Previous graph">‹</button>
+    <div class="chart-modal" role="dialog" aria-modal="true" aria-labelledby="chartModalTitle">
+      <button type="button" class="zone-modal-close" id="chartModalClose" aria-label="Close">×</button>
+      <div class="chart-card modal-chart">
+        <div class="chart-head">
+          <h3 id="chartModalTitle"></h3>
+          <div class="chart-head-right">
+            <div class="chart-legend" id="chartModalLegend"></div>
+            <div class="rep-pill-nav">
+              <button type="button" class="rep-pill-arrow" id="modalRepPrev" aria-label="Previous rep">‹</button>
+              <div class="rep-pills" id="chartModalPills"></div>
+              <button type="button" class="rep-pill-arrow" id="modalRepNext" aria-label="Next rep">›</button>
+            </div>
+          </div>
+        </div>
+        <svg id="chartModalSvg" viewBox="0 0 640 260" role="img"></svg>
+        <div class="chart-legend two" id="chartModalTwoLegend" hidden>
+          <span><i style="background:var(--chart-left)"></i>Left sleeve</span>
+          <span><i style="background:var(--chart-right)"></i>Right sleeve</span>
+        </div>
+        <p class="chart-caption" id="chartModalCaption"></p>
+      </div>
+    </div>
+    <button type="button" class="chart-nav-arrow chart-nav-next" id="chartTypeNext" aria-label="Next graph">›</button>
+  </div>
+</div><!-- /appView -->
+
+<div class="chart-modal-overlay" id="authModalOverlay" hidden>
+  <div class="chart-modal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle" style="max-width:420px;">
+    <button type="button" class="zone-modal-close" id="authModalClose" aria-label="Close">×</button>
+    <div class="chart-card modal-chart">
+      <div class="chart-head">
+        <h3 id="authModalTitle">Log in</h3>
+      </div>
+      <p class="chart-caption" id="authInviteNote" hidden></p>
+
+      <form id="authForm" style="display:flex; flex-direction:column; gap:10px; margin-top:14px;">
+        <div class="log-row" id="authNameRow" hidden>
+          <input type="text" id="authName" placeholder="Your name" autocomplete="name" maxlength="60">
+        </div>
+        <div class="log-row">
+          <input type="email" id="authEmail" placeholder="Email" autocomplete="username" required>
+        </div>
+        <div class="log-row pw-row">
+          <input type="password" id="authPassword" placeholder="Password" autocomplete="current-password" minlength="6" required>
+          <button type="button" class="pw-toggle" aria-label="Show password" aria-pressed="false">
+            <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10c2.2 3 5.4 4.5 9 4.5s6.8-1.5 9-4.5"/><path d="M5.6 12.6 4 15M9.3 14.2 8.6 17M14.7 14.2l.7 2.8M18.4 12.6 20 15"/></svg>
+            <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <p class="log-note auth-forgot" id="authForgotRow">
+          <button type="button" class="zone-link" id="authForgotBtn">Forgot password?</button>
+        </p>
+        <div class="log-row">
+          <button class="btn" type="submit" id="authSubmitBtn" style="flex:1; justify-content:center;">Log in</button>
+        </div>
+        <p class="log-note" id="authStatus"></p>
+        <p class="log-note" id="authResendRow" hidden>
+          <button type="button" class="zone-link" id="authResendBtn">Resend confirmation email</button>
+        </p>
+        <p class="log-note">
+          <span id="authToggleText">Don't have an account?</span>
+          <button type="button" class="zone-link" id="authToggleMode">Sign up</button>
+        </p>
+      </form>
+
+      <form id="authResetForm" hidden style="display:flex; flex-direction:column; gap:10px; margin-top:14px;">
+        <p class="chart-caption" style="margin-top:0;">Choose a new password for your account.</p>
+        <div class="log-row pw-row">
+          <input type="password" id="authNewPassword" placeholder="New password" autocomplete="new-password" minlength="6" required>
+          <button type="button" class="pw-toggle" aria-label="Show password" aria-pressed="false">
+            <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10c2.2 3 5.4 4.5 9 4.5s6.8-1.5 9-4.5"/><path d="M5.6 12.6 4 15M9.3 14.2 8.6 17M14.7 14.2l.7 2.8M18.4 12.6 20 15"/></svg>
+            <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <div class="log-row">
+          <button class="btn" type="submit" id="authResetBtn" style="flex:1; justify-content:center;">Save new password</button>
+        </div>
+        <p class="log-note" id="authResetStatus"></p>
+      </form>
+
+      <div id="loggedInPanel" hidden>
+        <p class="chart-caption" id="loggedInStatus"></p>
+        <button class="btn" type="button" id="goToDemoBtn" style="margin-top:14px;">Go to demo</button>
+        <button class="btn-ghost" type="button" id="logoutBtn" style="margin-top:10px;">Log out</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /authModal -->
+
+<div class="zone-modal-overlay" id="accountModalOverlay" hidden>
+  <div class="zone-modal" role="dialog" aria-modal="true" aria-labelledby="accountTitle">
+    <button type="button" class="zone-modal-close" id="accountModalClose" aria-label="Close">×</button>
+    <div class="zone-modal-body">
+      <p class="eyebrow">Account settings</p>
+      <h3 id="accountTitle">Your account</h3>
+      <p class="log-note" id="accountEmail" style="margin-top:6px;"></p>
+      <div class="account-photo">
+        <span class="person-avatar avatar-lg" id="accountAvatar" aria-hidden="true"></span>
+        <div>
+          <div class="log-row">
+            <button type="button" class="btn-ghost" id="accountPhotoBtn">Upload picture</button>
+            <button type="button" class="btn-ghost" id="accountPhotoRemove" hidden>Remove</button>
+          </div>
+          <input type="file" id="accountPhotoInput" accept="image/jpeg,image/png,image/webp" hidden>
+          <p class="log-note" id="accountPhotoStatus">Shown to your team instead of your initial.</p>
+        </div>
+      </div>
+      <form id="accountForm" style="display:flex; flex-direction:column; gap:10px; margin-top:18px;">
+        <label class="log-note" for="accountName">Name (shown to your team)</label>
+        <div class="log-row">
+          <input type="text" id="accountName" maxlength="60" autocomplete="name" required>
+        </div>
+        <div class="log-row">
+          <button class="btn" type="submit" id="accountSave">Save name</button>
+        </div>
+        <p class="log-note" id="accountStatus"></p>
+      </form>
+      <button class="btn-ghost" type="button" id="accountLogout" style="margin-top:18px;">Log out</button>
+    </div>
+  </div>
+</div><!-- /accountModal -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<!-- Load order matters: core defines what the others use, app wires it together.
+     ?v=N makes browsers that cached an older copy download the files again. -->
+<script src="js/core.js?v=15"></script>
+<script src="js/charts.js?v=15"></script>
+<script src="js/sensors.js?v=15"></script>
+<script src="js/exercises.js?v=15"></script>
+<script src="js/plans.js?v=15"></script>
+<script src="js/auth.js?v=15"></script>
+<script src="js/team.js?v=15"></script>
+<script src="js/mysets.js?v=15"></script>
+<script src="js/coachplans.js?v=15"></script>
+<script src="js/recorder.js?v=15"></script>
+<script src="js/recordings.js?v=15"></script>
+<script src="js/vbt.js?v=15"></script>
+<script src="js/training.js?v=15"></script>
+<script src="js/app.js?v=15"></script>
+</body></html>
