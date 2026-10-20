@@ -275,14 +275,19 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
   </td>
     <td width="55%" valign="top">
 
-**Next up**
+### Next steps
+- [ ] **Better drift handling** to make fast, light lifts as accurate as heavy ones
+- [ ] **Bench press and deadlift** analysis, validated like the squat
+- [ ] **A larger validation study** with powerlifters
+- [ ] **Combine both sensors**, e.g. to measure left–right balance
+- [ ] **Automatic rep detection**, so no rep count has to be entered
 
-- [ ] **More exercises**, including team sports
+### Longer term
+- [ ] **Estimate the 1RM** from the athlete's load–velocity profile
 - [ ] **Intelligent coach platform** with programs and benchmarks
+- [ ] **More exercises**, including team sports
 - [ ] **Other lifting equipment** beyond the barbell
 - [ ] **Wearable version** that tracks the athlete
-- [ ] **Wake Azure on connect** to skip the cold start
-
   </td>
   </tr>
 </table>
