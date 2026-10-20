@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/SportsTechVeloProject/.github/main/docs/images/readme/banner.svg" alt="V-LO: every rep, measured" width="700"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/SportsTechVeloProject/Product-and-UI/main/docs/vlo-intro.gif" alt="V-LO: a weight plate rolls in and becomes the O of the logo" width="600"></p>
 
 <p align="center"><b>Velocity-based training for powerlifters and strength athletes, with two Movesense sensors on the barbell and a web app for athletes and coaches.</b><br>
 KTH Sports Technology HT26 · Arvid · Greipur · Hugo · Silje · Svanberg</p>
