@@ -97,8 +97,7 @@ Coaches report three barriers to using VBT today:
   </tr>
 </table>
 
-> [!NOTE]
-> **Our research question:** Can two end-mounted IMUs give accurate enough mean concentric velocity for feedback during training, despite irregular barbell rotation?
+> ℹ️ **Our research question:** Can two end-mounted IMUs give accurate enough mean concentric velocity for feedback during training, despite irregular barbell rotation?
 
 <details>
 <summary><h3>Why do cheaper sensors struggle? · click to open</h3></summary>
@@ -242,8 +241,7 @@ python -m http.server 8080
 
 Then open [localhost:8080/vlo.html](http://localhost:8080/vlo.html) in **Chrome or Edge** (they support Web Bluetooth, which connects to the sensors) and log in with your own account.
 
-> [!WARNING]
-> The analysis runs on Azure, so changes to the analysis code also need a deploy. Check with the team before deploying.
+> ⚠️ **Warning:** The analysis runs on Azure, so changes to the analysis code also need a deploy. Check with the team before deploying.
 
 ## Recording a set
 
