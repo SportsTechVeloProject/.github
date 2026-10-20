@@ -2,7 +2,7 @@
 
 ![V-LO: every rep, measured](docs/images/readme/banner.svg)
 
-**Velocity-based training for powerlifters and strenth-athletes, built on two off-the-shelf Movesense sensors and a web app for athletes and coaches.**
+**Velocity-based training for powerlifters and strength-athletes, built on two off-the-shelf Movesense sensors and a web app for athletes and coaches.**
 
 ### [▶ Open the V-LO web app](https://sportstechveloproject.github.io/.github/code/website/)
 
