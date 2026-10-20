@@ -4,7 +4,7 @@
 KTH Sports Technology HT26 · Arvid · Greipur · Hugo · Silje · Svanberg</p>
 
 <h2 align="center"><a href="https://sportstechveloproject.github.io/.github/code/website/">▶ Open the V-LO web app</a></h2>
-<h2 align="center"><a href="https://github.com/SportsTechVeloProject/.github#readme">📖 Read the project</a></h2>
+<h2 align="center"><a href="https://github.com/SportsTechVeloProject/.github#readme">📖 Project overview</a></h2>
 
 <div align="center">
 
