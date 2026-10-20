@@ -1,0 +1,7 @@
+# Not deployed to Azure
+__pycache__/
+*.pyc
+.env
+.venv/
+local.settings.json
+local.settings.example.json
