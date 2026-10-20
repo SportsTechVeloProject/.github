@@ -6,6 +6,8 @@
 | [`analysis/`](analysis/) | The Python analysis that runs on Azure: Madgwick orientation filter, drift correction, rep detection and velocity estimation (`squat/`), plus the Azure Function and Supabase helpers. |
 | [`database/`](database/) | SQL for the Supabase database: table changes (`migrations/`), training plans and queries. |
 
+The website is hosted with GitHub Pages: **[open the V-LO web app](https://sportstechveloproject.github.io/.github/code/website/)**. It updates automatically when `main` changes.
+
 ## Run the website locally
 
 ```bash
