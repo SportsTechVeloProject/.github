@@ -1,297 +1,272 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2410" height="993" viewBox="0 0 2410 993" font-family="'IBM Plex Sans','Segoe UI',Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1964" viewBox="0 0 1560 1964" font-family="'IBM Plex Sans','Segoe UI',Helvetica,Arial,sans-serif">
 <title>V-Lo database structure</title>
 <defs>
-  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-    <path d="M0,0 L10,5 L0,10 z" fill="#1B1D22"/></marker>
-  <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-    <path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/></marker>
-  <marker id="arrowMuted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-    <path d="M0,0 L10,5 L0,10 z" fill="#6B7480"/></marker>
+<style>.m{font-family:'IBM Plex Mono',Consolas,'Courier New',monospace}</style>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1B1D22"/></marker>
+<marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/></marker>
+<marker id="arrowMuted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F6873"/></marker>
 </defs>
-<rect width="2410" height="993" fill="#F7F5EF"/>
-<text x="60" y="62" font-size="30" font-weight="700" fill="#1B1D22">V-Lo database</text>
-<text x="60" y="92" font-size="15" fill="#6B7480">Supabase (Postgres). Arrows are foreign keys: they point from the row that refers to the row it refers to.</text>
-<rect x="36" y="118" width="732" height="670" rx="10" fill="#EEF1FC" stroke="#2247D6" stroke-opacity="0.35"/>
-<text x="54" y="148" font-size="16" font-weight="700" fill="#2247D6">People and teams</text>
-<text x="750" y="148" font-size="13" text-anchor="end" fill="#2247D6">exists</text>
-<rect x="808" y="118" width="1566" height="278" rx="10" fill="#EAF5F3" stroke="#1F8A7E" stroke-opacity="0.35"/>
-<text x="826" y="148" font-size="16" font-weight="700" fill="#1F8A7E">Recordings</text>
-<text x="2356" y="148" font-size="13" text-anchor="end" fill="#1F8A7E">exists · written by python/main.py</text>
-<rect x="808" y="464" width="1566" height="278" rx="10" fill="#FBF0EA" stroke="#B5532A" stroke-opacity="0.35"/>
-<text x="826" y="494" font-size="16" font-weight="700" fill="#B5532A">Training plans and workouts</text>
-<text x="2356" y="494" font-size="13" text-anchor="end" fill="#B5532A">new · supabase/plans.sql (not run yet)</text>
-<text x="828" y="210" font-size="13" fill="#6B7480"><tspan x="828" dy="0">A recording belongs to the</tspan><tspan x="828" dy="18">lifter, not to a team: their</tspan><tspan x="828" dy="18">history moves with them.</tspan><tspan x="828" dy="28">Coaches see it because the</tspan><tspan x="828" dy="18">lifter is in their team.</tspan></text>
-<path d="M311,396 L311,266" fill="none" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="280.5" y="319.0" width="61" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="311" y="332.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#1B1D22">user_id</text>
-<path d="M493,396 L493,326" fill="none" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="462.5" y="349.0" width="61" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="493" y="362.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#1B1D22">team_id</text>
-<path d="M714,602 L714,326" fill="none" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="683.5" y="564" width="61" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="714" y="577" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#1B1D22">team_id</text>
-<path d="M90,602 L90,266" fill="none" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="59.5" y="564" width="61" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="90" y="577" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#1B1D22">user_id</text>
-<path d="M342,720.0 L462,720.0" fill="none" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="364.5" y="694.0" width="75" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="402.0" y="707.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#1B1D22">invite_id</text>
-<path d="M2068,248.0 L1938,248.0" fill="none" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="1962.0" y="222.0" width="82" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="2003.0" y="235.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#1B1D22">session_id</text>
-<path d="M1656,348.0 L1591.0,348.0 L1591.0,236 L1526,236" fill="none" stroke="#6B7480" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrowMuted)"/>
-<rect x="1539.5" y="354.0" width="103" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="1591.0" y="367.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#6B7480">raw_data_path</text>
-<path d="M1244,594.0 L1114,594.0" fill="none" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="1148.5" y="568.0" width="61" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="1179.0" y="581.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#1B1D22">plan_id</text>
-<path d="M1656,614.0 L1526,614.0" fill="none" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="1539.5" y="588.0" width="103" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="1591.0" y="601.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#1B1D22">assignment_id</text>
-<path d="M2068,594.0 L1938,594.0" fill="none" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<rect x="1962.0" y="568.0" width="82" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="2003.0" y="581.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#1B1D22">workout_id</text>
-<path d="M2209.0,516 L2209.0,447.0 L1797.0,447.0 L1797.0,366" fill="none" stroke="#C0392B" stroke-width="2.4" marker-end="url(#arrowRed)"/>
-<rect x="1916.5" y="421.0" width="173" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="2003.0" y="434.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#C0392B">recording_id (optional)</text>
-<rect x="1885.0" y="447.0" width="236" height="18" rx="4" fill="#F7F5EF" opacity="0.92"/>
-<text x="2003.0" y="460.0" font-size="12" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" text-anchor="middle" fill="#C0392B">where the plan meets the sensors</text>
-<rect x="60" y="170" width="282" height="96" rx="6" fill="#FFFFFF" stroke="#2247D6" stroke-width="1.5"/>
-<rect x="60" y="170" width="282" height="46" rx="6" fill="#2247D6"/>
-<rect x="60" y="210" width="282" height="6" fill="#2247D6"/>
-<text x="72" y="190" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">profiles</text>
-<text x="72" y="207" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">one row per person</text>
-<text x="72" y="232.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="330" y="232.0" font-size="11" text-anchor="end" fill="#B8860B">PK = login id</text>
-<line x1="68" x2="334" y1="237.0" y2="237.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="72" y="252.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">full_name</text>
-<rect x="462" y="170" width="282" height="156" rx="6" fill="#FFFFFF" stroke="#2247D6" stroke-width="1.5"/>
-<rect x="462" y="170" width="282" height="46" rx="6" fill="#2247D6"/>
-<rect x="462" y="210" width="282" height="6" fill="#2247D6"/>
-<text x="474" y="190" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">teams</text>
-<text x="474" y="207" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">one row per team</text>
-<text x="474" y="232.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="732" y="232.0" font-size="11" text-anchor="end" fill="#B8860B">PK</text>
-<line x1="470" x2="736" y1="237.0" y2="237.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="474" y="252.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">name</text>
-<line x1="470" x2="736" y1="257.0" y2="257.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="474" y="272.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">public_description</text>
-<line x1="470" x2="736" y1="277.0" y2="277.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="474" y="292.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">private_description</text>
-<line x1="470" x2="736" y1="297.0" y2="297.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="474" y="312.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">created_by</text>
-<rect x="658.0" y="300.0" width="76.0" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="729" y="312.0" font-size="11" text-anchor="end" fill="#7A4FB0">→ profiles</text>
-<rect x="261" y="396" width="282" height="136" rx="6" fill="#FFFFFF" stroke="#2247D6" stroke-width="1.5"/>
-<rect x="261" y="396" width="282" height="46" rx="6" fill="#2247D6"/>
-<rect x="261" y="436" width="282" height="6" fill="#2247D6"/>
-<text x="273" y="416" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">team_members</text>
-<text x="273" y="433" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">a person in a team</text>
-<text x="273" y="458.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">team_id</text>
-<text x="531" y="458.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ teams</text>
-<line x1="269" x2="535" y1="463.0" y2="463.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="273" y="478.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">user_id</text>
-<text x="531" y="478.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ profiles</text>
-<line x1="269" x2="535" y1="483.0" y2="483.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="273" y="498.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">role</text>
-<text x="531" y="498.0" font-size="11" text-anchor="end" fill="#6B7480">admin · coach · member</text>
-<line x1="269" x2="535" y1="503.0" y2="503.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="273" y="518.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">joined_at</text>
-<rect x="462" y="602" width="282" height="156" rx="6" fill="#FFFFFF" stroke="#2247D6" stroke-width="1.5"/>
-<rect x="462" y="602" width="282" height="46" rx="6" fill="#2247D6"/>
-<rect x="462" y="642" width="282" height="6" fill="#2247D6"/>
-<text x="474" y="622" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">team_invites</text>
-<text x="474" y="639" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">an invite to a team</text>
-<text x="474" y="664.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="732" y="664.0" font-size="11" text-anchor="end" fill="#B8860B">PK</text>
-<line x1="470" x2="736" y1="669.0" y2="669.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="474" y="684.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">team_id</text>
-<text x="732" y="684.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ teams</text>
-<line x1="470" x2="736" y1="689.0" y2="689.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="474" y="704.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">role</text>
-<line x1="470" x2="736" y1="709.0" y2="709.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="474" y="724.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">created_by</text>
-<rect x="658.0" y="712.0" width="76.0" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="729" y="724.0" font-size="11" text-anchor="end" fill="#7A4FB0">→ profiles</text>
-<line x1="470" x2="736" y1="729.0" y2="729.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="474" y="744.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">invited_user_id</text>
-<rect x="658.0" y="732.0" width="76.0" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="729" y="744.0" font-size="11" text-anchor="end" fill="#7A4FB0">→ profiles</text>
-<rect x="60" y="602" width="282" height="156" rx="6" fill="#FFFFFF" stroke="#2247D6" stroke-width="1.5"/>
-<rect x="60" y="602" width="282" height="46" rx="6" fill="#2247D6"/>
-<rect x="60" y="642" width="282" height="6" fill="#2247D6"/>
-<text x="72" y="622" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">team_join_requests</text>
-<text x="72" y="639" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">a request to join</text>
-<text x="72" y="664.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="330" y="664.0" font-size="11" text-anchor="end" fill="#B8860B">PK</text>
-<line x1="68" x2="334" y1="669.0" y2="669.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="72" y="684.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">team_id</text>
-<rect x="275.8" y="672.0" width="56.199999999999996" height="16" rx="8" fill="#2247D6" fill-opacity="0.12"/>
-<text x="327" y="684.0" font-size="11" text-anchor="end" fill="#2247D6">→ teams</text>
-<line x1="68" x2="334" y1="689.0" y2="689.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="72" y="704.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">user_id</text>
-<text x="330" y="704.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ profiles</text>
-<line x1="68" x2="334" y1="709.0" y2="709.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="72" y="724.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">invite_id</text>
-<text x="330" y="724.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ team_invites</text>
-<line x1="68" x2="334" y1="729.0" y2="729.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="72" y="744.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">status</text>
-<rect x="1656" y="170" width="282" height="196" rx="6" fill="#FFFFFF" stroke="#1F8A7E" stroke-width="1.5"/>
-<rect x="1656" y="170" width="282" height="46" rx="6" fill="#1F8A7E"/>
-<rect x="1656" y="210" width="282" height="6" fill="#1F8A7E"/>
-<text x="1668" y="190" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">sessions</text>
-<text x="1668" y="207" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">one recorded set (Start → Stop)</text>
-<text x="1668" y="232.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="1926" y="232.0" font-size="11" text-anchor="end" fill="#B8860B">PK</text>
-<line x1="1664" x2="1930" y1="237.0" y2="237.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="252.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">user_id</text>
-<rect x="1852.0" y="240.0" width="76.0" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="1923" y="252.0" font-size="11" text-anchor="end" fill="#7A4FB0">→ profiles</text>
-<line x1="1664" x2="1930" y1="257.0" y2="257.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="272.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">exercise</text>
-<text x="1926" y="272.0" font-size="11" text-anchor="end" fill="#6B7480">back_squat</text>
-<line x1="1664" x2="1930" y1="277.0" y2="277.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="292.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">weight_kg</text>
-<line x1="1664" x2="1930" y1="297.0" y2="297.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="312.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">recorded_at</text>
-<line x1="1664" x2="1930" y1="317.0" y2="317.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="332.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">reported_rep_count</text>
-<line x1="1664" x2="1930" y1="337.0" y2="337.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="352.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">raw_data_path</text>
-<text x="1926" y="352.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ Storage</text>
-<rect x="2068" y="170" width="282" height="196" rx="6" fill="#FFFFFF" stroke="#1F8A7E" stroke-width="1.5"/>
-<rect x="2068" y="170" width="282" height="46" rx="6" fill="#1F8A7E"/>
-<rect x="2068" y="210" width="282" height="6" fill="#1F8A7E"/>
-<text x="2080" y="190" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">reps</text>
-<text x="2080" y="207" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">one rep in a recording</text>
-<text x="2080" y="232.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="2338" y="232.0" font-size="11" text-anchor="end" fill="#B8860B">PK</text>
-<line x1="2076" x2="2342" y1="237.0" y2="237.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="252.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">session_id</text>
-<text x="2338" y="252.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ sessions</text>
-<line x1="2076" x2="2342" y1="257.0" y2="257.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="272.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">rep_index</text>
-<line x1="2076" x2="2342" y1="277.0" y2="277.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="292.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">left / right_mean_velocity</text>
-<line x1="2076" x2="2342" y1="297.0" y2="297.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="312.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">left / right_peak_velocity</text>
-<line x1="2076" x2="2342" y1="317.0" y2="317.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="332.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">concentric / eccentric_duration</text>
-<line x1="2076" x2="2342" y1="337.0" y2="337.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="352.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">metrics</text>
-<text x="2338" y="352.0" font-size="11" text-anchor="end" fill="#6B7480">jsonb</text>
-<rect x="1244" y="170" width="282" height="96" rx="6" fill="#FFFFFF" stroke="#1F8A7E" stroke-width="1.5" stroke-dasharray="6 4"/>
-<rect x="1244" y="170" width="282" height="46" rx="6" fill="#1F8A7E"/>
-<rect x="1244" y="210" width="282" height="6" fill="#1F8A7E"/>
-<text x="1256" y="190" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">raw-sessions</text>
-<text x="1256" y="207" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">Storage bucket, not a table</text>
-<text x="1256" y="232.0" font-size="12.5" font-family="'IBM Plex Sans','Segoe UI',Helvetica,Arial,sans-serif" fill="#6B7480">&lt;user_id&gt;/&lt;session_id&gt;.json</text>
-<line x1="1252" x2="1518" y1="237.0" y2="237.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1256" y="252.0" font-size="12.5" font-family="'IBM Plex Sans','Segoe UI',Helvetica,Arial,sans-serif" fill="#6B7480">raw sensor samples, ~1 MB</text>
-<rect x="832" y="516" width="282" height="196" rx="6" fill="#FFFFFF" stroke="#B5532A" stroke-width="1.5"/>
-<rect x="832" y="516" width="282" height="46" rx="6" fill="#B5532A"/>
-<rect x="832" y="556" width="282" height="6" fill="#B5532A"/>
-<text x="844" y="536" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">plans</text>
-<text x="844" y="553" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">a programme: a team's, or one person's own</text>
-<text x="844" y="578.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="1102" y="578.0" font-size="11" text-anchor="end" fill="#B8860B">PK</text>
-<line x1="840" x2="1106" y1="583.0" y2="583.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="844" y="598.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">team_id</text>
-<rect x="1047.8" y="586.0" width="56.199999999999996" height="16" rx="8" fill="#2247D6" fill-opacity="0.12"/>
-<text x="1099" y="598.0" font-size="11" text-anchor="end" fill="#2247D6">→ teams</text>
-<line x1="840" x2="1106" y1="603.0" y2="603.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="844" y="618.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">owner_id</text>
-<rect x="1028.0" y="606.0" width="76.0" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="1099" y="618.0" font-size="11" text-anchor="end" fill="#7A4FB0">→ profiles</text>
-<line x1="840" x2="1106" y1="623.0" y2="623.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="844" y="638.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">created_by</text>
-<rect x="1028.0" y="626.0" width="76.0" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="1099" y="638.0" font-size="11" text-anchor="end" fill="#7A4FB0">→ profiles</text>
-<line x1="840" x2="1106" y1="643.0" y2="643.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="844" y="658.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">name</text>
-<line x1="840" x2="1106" y1="663.0" y2="663.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="844" y="678.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">content</text>
-<text x="1102" y="678.0" font-size="11" text-anchor="end" fill="#6B7480">weeks › days › exercises</text>
-<line x1="840" x2="1106" y1="683.0" y2="683.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="844" y="698.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">source_text</text>
-<rect x="1244" y="516" width="282" height="156" rx="6" fill="#FFFFFF" stroke="#B5532A" stroke-width="1.5"/>
-<rect x="1244" y="516" width="282" height="46" rx="6" fill="#B5532A"/>
-<rect x="1244" y="556" width="282" height="6" fill="#B5532A"/>
-<text x="1256" y="536" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">plan_assignments</text>
-<text x="1256" y="553" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">a plan given to one athlete</text>
-<text x="1256" y="578.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="1514" y="578.0" font-size="11" text-anchor="end" fill="#B8860B">PK</text>
-<line x1="1252" x2="1518" y1="583.0" y2="583.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1256" y="598.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">plan_id</text>
-<text x="1514" y="598.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ plans</text>
-<line x1="1252" x2="1518" y1="603.0" y2="603.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1256" y="618.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">athlete_id</text>
-<rect x="1440.0" y="606.0" width="76.0" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="1511" y="618.0" font-size="11" text-anchor="end" fill="#7A4FB0">→ profiles</text>
-<line x1="1252" x2="1518" y1="623.0" y2="623.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1256" y="638.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">start_date</text>
-<line x1="1252" x2="1518" y1="643.0" y2="643.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1256" y="658.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">weekdays</text>
-<text x="1514" y="658.0" font-size="11" text-anchor="end" fill="#6B7480">1 = Mon … 7 = Sun</text>
-<rect x="1656" y="516" width="282" height="196" rx="6" fill="#FFFFFF" stroke="#B5532A" stroke-width="1.5"/>
-<rect x="1656" y="516" width="282" height="46" rx="6" fill="#B5532A"/>
-<rect x="1656" y="556" width="282" height="6" fill="#B5532A"/>
-<text x="1668" y="536" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">workouts</text>
-<text x="1668" y="553" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">one training day for one athlete</text>
-<text x="1668" y="578.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="1926" y="578.0" font-size="11" text-anchor="end" fill="#B8860B">PK</text>
-<line x1="1664" x2="1930" y1="583.0" y2="583.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="598.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">athlete_id</text>
-<rect x="1852.0" y="586.0" width="76.0" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="1923" y="598.0" font-size="11" text-anchor="end" fill="#7A4FB0">→ profiles</text>
-<line x1="1664" x2="1930" y1="603.0" y2="603.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="618.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">assignment_id</text>
-<text x="1926" y="618.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ plan_assignments · optional</text>
-<line x1="1664" x2="1930" y1="623.0" y2="623.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="638.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">week_no · day_no</text>
-<line x1="1664" x2="1930" y1="643.0" y2="643.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="658.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">label</text>
-<line x1="1664" x2="1930" y1="663.0" y2="663.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="678.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">scheduled_date</text>
-<text x="1926" y="678.0" font-size="11" text-anchor="end" fill="#6B7480">coach can move</text>
-<line x1="1664" x2="1930" y1="683.0" y2="683.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="1668" y="698.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">completed_at</text>
-<text x="1926" y="698.0" font-size="11" text-anchor="end" fill="#6B7480">empty + past = missed</text>
-<rect x="2068" y="516" width="282" height="196" rx="6" fill="#FFFFFF" stroke="#B5532A" stroke-width="1.5"/>
-<rect x="2068" y="516" width="282" height="46" rx="6" fill="#B5532A"/>
-<rect x="2068" y="556" width="282" height="6" fill="#B5532A"/>
-<text x="2080" y="536" font-size="15" font-weight="700" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#FFFFFF">set_logs</text>
-<text x="2080" y="553" font-size="11.5" fill="#FFFFFF" fill-opacity="0.88">one set the athlete finished</text>
-<text x="2080" y="578.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22" font-weight="700">id</text>
-<text x="2338" y="578.0" font-size="11" text-anchor="end" fill="#B8860B">PK</text>
-<line x1="2076" x2="2342" y1="583.0" y2="583.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="598.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">workout_id</text>
-<text x="2338" y="598.0" font-size="11" text-anchor="end" fill="#1B1D22" font-weight="600">→ workouts</text>
-<line x1="2076" x2="2342" y1="603.0" y2="603.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="618.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">athlete_id</text>
-<rect x="2264.0" y="606.0" width="76.0" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="2335" y="618.0" font-size="11" text-anchor="end" fill="#7A4FB0">→ profiles</text>
-<line x1="2076" x2="2342" y1="623.0" y2="623.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="638.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">exercise · set_no</text>
-<line x1="2076" x2="2342" y1="643.0" y2="643.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="658.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">weight_kg · reps</text>
-<line x1="2076" x2="2342" y1="663.0" y2="663.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="678.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">done_at</text>
-<line x1="2076" x2="2342" y1="683.0" y2="683.0" stroke="#C9C3B2" stroke-opacity="0.5"/>
-<text x="2080" y="698.0" font-size="12.5" font-family="'IBM Plex Mono',Consolas,'Courier New',monospace" fill="#1B1D22">recording_id</text>
-<text x="2338" y="698.0" font-size="11" text-anchor="end" fill="#C0392B" font-weight="600">→ sessions · optional · unique</text>
-<text x="60" y="828" font-size="15" font-weight="700" fill="#1B1D22">How to read it</text>
-<line x1="60" x2="96" y1="852" y2="852" stroke="#1B1D22" stroke-width="1.6" marker-end="url(#arrow)"/>
-<text x="142" y="856" font-size="13" fill="#1B1D22">Foreign key: the row at the tail refers to the row the arrow points at.</text>
-<rect x="60" y="863" width="70" height="16" rx="8" fill="#7A4FB0" fill-opacity="0.12"/>
-<text x="95" y="875" font-size="11" text-anchor="middle" fill="#7A4FB0">→ profiles</text>
-<text x="142" y="878" font-size="13" fill="#1B1D22">Tag instead of a line: this column refers to profiles (a person) or teams. Drawn as a tag so lines don't cross the whole picture.</text>
-<text x="60" y="898" font-size="12" font-weight="700" fill="#B8860B">PK</text>
-<text x="142" y="900" font-size="13" fill="#1B1D22">PK = primary key, each row's own id. All ids are uuids. A person's id is the same as their login id.</text>
-<circle cx="66" cy="917" r="4" fill="#B5532A"/>
-<text x="142" y="922" font-size="13" fill="#1B1D22">Plans belong to a team (team_id) or to one person (owner_id). Workouts without assignment_id are free workouts the athlete logged without a plan.</text>
-<circle cx="66" cy="939" r="4" fill="#B5532A"/>
-<text x="142" y="944" font-size="13" fill="#1B1D22">Roles live in team_members, per team: one login can coach one team, train in another, and record its own sets with no team at all.</text>
-<line x1="60" x2="96" y1="962" y2="962" stroke="#C0392B" stroke-width="2.4" marker-end="url(#arrowRed)"/>
-<text x="142" y="966" font-size="13" fill="#1B1D22">Deleting a plan, assignment or workout never deletes recordings: the set log's recording_id just becomes empty.</text>
+<rect width="1560" height="1964" fill="#F7F5EF"/>
+<text x="40" y="58" font-size="34" fill="#1B1D22" font-weight="700">V-Lo database</text>
+<text x="40" y="92" font-size="19" fill="#5F6873">Supabase (Postgres). Arrows are foreign keys: they point from the row that refers to the row it refers to.</text>
+<rect x="16" y="116" width="1528" height="636" rx="12" fill="#EEF1FC" stroke="#2247D6" stroke-opacity="0.35"/>
+<text x="40" y="154" font-size="24" fill="#2247D6" font-weight="700">People and teams</text>
+<text x="1520" y="154" font-size="17" fill="#2247D6" text-anchor="end">Supabase Auth + profiles</text>
+<rect x="16" y="792" width="1528" height="414" rx="12" fill="#EAF5F3" stroke="#1F8A7E" stroke-opacity="0.35"/>
+<text x="40" y="830" font-size="24" fill="#1F8A7E" font-weight="700">Recordings</text>
+<text x="1520" y="830" font-size="17" fill="#1F8A7E" text-anchor="end">written by the analysis (python/)</text>
+<rect x="16" y="1280" width="1528" height="414" rx="12" fill="#FBF0EA" stroke="#B5532A" stroke-opacity="0.35"/>
+<text x="40" y="1318" font-size="24" fill="#B5532A" font-weight="700">Training plans and workouts</text>
+<text x="1520" y="1318" font-size="17" fill="#B5532A" text-anchor="end">supabase/plans.sql</text>
+<rect x="40" y="178" width="340" height="146" rx="8" fill="#FFFFFF" stroke="#2247D6" stroke-width="2"/>
+<rect x="40" y="178" width="340" height="62" rx="8" fill="#2247D6"/>
+<rect x="40" y="232" width="340" height="8" fill="#2247D6"/>
+<text x="56" y="206" font-size="21" class="m" fill="#FFFFFF" font-weight="700">profiles</text>
+<text x="56" y="228" font-size="16" fill="#FFFFFF" fill-opacity="0.9">one row per person</text>
+<text x="56" y="265" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="364" y="265" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK = login id</text>
+<line x1="50" x2="370" y1="276" y2="276" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="301" font-size="18" class="m" fill="#1B1D22">full_name</text>
+<rect x="420" y="178" width="340" height="218" rx="8" fill="#FFFFFF" stroke="#2247D6" stroke-width="2"/>
+<rect x="420" y="178" width="340" height="62" rx="8" fill="#2247D6"/>
+<rect x="420" y="232" width="340" height="8" fill="#2247D6"/>
+<text x="436" y="206" font-size="21" class="m" fill="#FFFFFF" font-weight="700">team_members</text>
+<text x="436" y="228" font-size="16" fill="#FFFFFF" fill-opacity="0.9">a person in a team</text>
+<text x="436" y="265" font-size="18" class="m" fill="#1B1D22">team_id</text>
+<text x="744" y="265" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ teams</text>
+<line x1="430" x2="750" y1="276" y2="276" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="301" font-size="18" class="m" fill="#1B1D22">user_id</text>
+<text x="744" y="301" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ profiles</text>
+<line x1="430" x2="750" y1="312" y2="312" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="337" font-size="18" class="m" fill="#1B1D22">role</text>
+<text x="744" y="337" font-size="15" fill="#5F6873" text-anchor="end">admin · coach · member</text>
+<line x1="430" x2="750" y1="348" y2="348" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="373" font-size="18" class="m" fill="#1B1D22">joined_at</text>
+<rect x="800" y="178" width="340" height="254" rx="8" fill="#FFFFFF" stroke="#2247D6" stroke-width="2"/>
+<rect x="800" y="178" width="340" height="62" rx="8" fill="#2247D6"/>
+<rect x="800" y="232" width="340" height="8" fill="#2247D6"/>
+<text x="816" y="206" font-size="21" class="m" fill="#FFFFFF" font-weight="700">teams</text>
+<text x="816" y="228" font-size="16" fill="#FFFFFF" fill-opacity="0.9">one row per team</text>
+<text x="816" y="265" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="1124" y="265" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK</text>
+<line x1="810" x2="1130" y1="276" y2="276" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="301" font-size="18" class="m" fill="#1B1D22">name</text>
+<line x1="810" x2="1130" y1="312" y2="312" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="337" font-size="18" class="m" fill="#1B1D22">public_description</text>
+<line x1="810" x2="1130" y1="348" y2="348" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="373" font-size="18" class="m" fill="#1B1D22">private_description</text>
+<line x1="810" x2="1130" y1="384" y2="384" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="409" font-size="18" class="m" fill="#1B1D22">created_by</text>
+<rect x="1028" y="392" width="104" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="1124" y="409" font-size="15" fill="#7A4FB0" text-anchor="end">→ profiles</text>
+<rect x="40" y="472" width="340" height="254" rx="8" fill="#FFFFFF" stroke="#2247D6" stroke-width="2"/>
+<rect x="40" y="472" width="340" height="62" rx="8" fill="#2247D6"/>
+<rect x="40" y="526" width="340" height="8" fill="#2247D6"/>
+<text x="56" y="500" font-size="21" class="m" fill="#FFFFFF" font-weight="700">team_join_requests</text>
+<text x="56" y="522" font-size="16" fill="#FFFFFF" fill-opacity="0.9">a request to join</text>
+<text x="56" y="559" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="364" y="559" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK</text>
+<line x1="50" x2="370" y1="570" y2="570" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="595" font-size="18" class="m" fill="#1B1D22">team_id</text>
+<rect x="293.8" y="578" width="78.2" height="24" rx="12" fill="#2247D6" fill-opacity="0.13"/>
+<text x="364" y="595" font-size="15" fill="#2247D6" text-anchor="end">→ teams</text>
+<line x1="50" x2="370" y1="606" y2="606" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="631" font-size="18" class="m" fill="#1B1D22">user_id</text>
+<text x="364" y="631" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ profiles</text>
+<line x1="50" x2="370" y1="642" y2="642" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="667" font-size="18" class="m" fill="#1B1D22">invite_id</text>
+<text x="364" y="667" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ team_invites</text>
+<line x1="50" x2="370" y1="678" y2="678" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="703" font-size="18" class="m" fill="#1B1D22">status</text>
+<rect x="420" y="472" width="340" height="254" rx="8" fill="#FFFFFF" stroke="#2247D6" stroke-width="2"/>
+<rect x="420" y="472" width="340" height="62" rx="8" fill="#2247D6"/>
+<rect x="420" y="526" width="340" height="8" fill="#2247D6"/>
+<text x="436" y="500" font-size="21" class="m" fill="#FFFFFF" font-weight="700">team_invites</text>
+<text x="436" y="522" font-size="16" fill="#FFFFFF" fill-opacity="0.9">an invite to a team</text>
+<text x="436" y="559" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="744" y="559" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK</text>
+<line x1="430" x2="750" y1="570" y2="570" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="595" font-size="18" class="m" fill="#1B1D22">team_id</text>
+<text x="744" y="595" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ teams</text>
+<line x1="430" x2="750" y1="606" y2="606" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="631" font-size="18" class="m" fill="#1B1D22">role</text>
+<line x1="430" x2="750" y1="642" y2="642" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="667" font-size="18" class="m" fill="#1B1D22">created_by</text>
+<rect x="648" y="650" width="104" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="744" y="667" font-size="15" fill="#7A4FB0" text-anchor="end">→ profiles</text>
+<line x1="430" x2="750" y1="678" y2="678" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="703" font-size="18" class="m" fill="#1B1D22">invited_user_id</text>
+<rect x="648" y="686" width="104" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="744" y="703" font-size="15" fill="#7A4FB0" text-anchor="end">→ profiles</text>
+<text x="1186" y="208" font-size="18" fill="#5F6873"><tspan x="1186" dy="0">Roles live in team_members,</tspan><tspan x="1186" dy="27">per team: one login can coach</tspan><tspan x="1186" dy="27">one team, train in another,</tspan><tspan x="1186" dy="27">and record its own sets with</tspan><tspan x="1186" dy="27">no team at all.</tspan></text>
+<rect x="40" y="854" width="340" height="146" rx="8" fill="#FFFFFF" stroke="#1F8A7E" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="40" y="854" width="340" height="62" rx="8" fill="#1F8A7E"/>
+<rect x="40" y="908" width="340" height="8" fill="#1F8A7E"/>
+<text x="56" y="882" font-size="21" class="m" fill="#FFFFFF" font-weight="700">raw-sessions</text>
+<text x="56" y="904" font-size="16" fill="#FFFFFF" fill-opacity="0.9">Storage bucket, not a table</text>
+<text x="56" y="941" font-size="17" fill="#5F6873">&lt;user_id&gt;/&lt;session_id&gt;.json</text>
+<line x1="50" x2="370" y1="952" y2="952" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="977" font-size="17" fill="#5F6873">raw sensor samples, ~1 MB</text>
+<rect x="420" y="854" width="340" height="326" rx="8" fill="#FFFFFF" stroke="#1F8A7E" stroke-width="2"/>
+<rect x="420" y="854" width="340" height="62" rx="8" fill="#1F8A7E"/>
+<rect x="420" y="908" width="340" height="8" fill="#1F8A7E"/>
+<text x="436" y="882" font-size="21" class="m" fill="#FFFFFF" font-weight="700">sessions</text>
+<text x="436" y="904" font-size="16" fill="#FFFFFF" fill-opacity="0.9">one recorded set (Start → Stop)</text>
+<text x="436" y="941" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="744" y="941" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK</text>
+<line x1="430" x2="750" y1="952" y2="952" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="977" font-size="18" class="m" fill="#1B1D22">user_id</text>
+<rect x="648" y="960" width="104" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="744" y="977" font-size="15" fill="#7A4FB0" text-anchor="end">→ profiles</text>
+<line x1="430" x2="750" y1="988" y2="988" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="1013" font-size="18" class="m" fill="#1B1D22">exercise</text>
+<text x="744" y="1013" font-size="15" fill="#5F6873" text-anchor="end">back_squat</text>
+<line x1="430" x2="750" y1="1024" y2="1024" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="1049" font-size="18" class="m" fill="#1B1D22">weight_kg</text>
+<line x1="430" x2="750" y1="1060" y2="1060" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="1085" font-size="18" class="m" fill="#1B1D22">recorded_at</text>
+<line x1="430" x2="750" y1="1096" y2="1096" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="1121" font-size="18" class="m" fill="#1B1D22">reported_rep_count</text>
+<line x1="430" x2="750" y1="1132" y2="1132" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="1157" font-size="18" class="m" fill="#1B1D22">raw_data_path</text>
+<text x="744" y="1157" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ Storage</text>
+<rect x="800" y="854" width="340" height="326" rx="8" fill="#FFFFFF" stroke="#1F8A7E" stroke-width="2"/>
+<rect x="800" y="854" width="340" height="62" rx="8" fill="#1F8A7E"/>
+<rect x="800" y="908" width="340" height="8" fill="#1F8A7E"/>
+<text x="816" y="882" font-size="21" class="m" fill="#FFFFFF" font-weight="700">reps</text>
+<text x="816" y="904" font-size="16" fill="#FFFFFF" fill-opacity="0.9">one rep in a recording</text>
+<text x="816" y="941" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="1124" y="941" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK</text>
+<line x1="810" x2="1130" y1="952" y2="952" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="977" font-size="18" class="m" fill="#1B1D22">session_id</text>
+<text x="1124" y="977" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ sessions</text>
+<line x1="810" x2="1130" y1="988" y2="988" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1013" font-size="18" class="m" fill="#1B1D22">rep_index</text>
+<line x1="810" x2="1130" y1="1024" y2="1024" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1049" font-size="18" class="m" fill="#1B1D22">left/right_mean_velocity</text>
+<line x1="810" x2="1130" y1="1060" y2="1060" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1085" font-size="18" class="m" fill="#1B1D22">left/right_peak_velocity</text>
+<line x1="810" x2="1130" y1="1096" y2="1096" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1121" font-size="18" class="m" fill="#1B1D22">con/eccentric_duration</text>
+<line x1="810" x2="1130" y1="1132" y2="1132" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1157" font-size="18" class="m" fill="#1B1D22">metrics</text>
+<text x="1124" y="1157" font-size="15" fill="#5F6873" text-anchor="end">jsonb</text>
+<text x="1186" y="884" font-size="18" fill="#5F6873"><tspan x="1186" dy="0">A recording belongs to the</tspan><tspan x="1186" dy="27">lifter, not to a team: their</tspan><tspan x="1186" dy="27">history moves with them.</tspan><tspan x="1186" dy="27">Coaches see it because the</tspan><tspan x="1186" dy="27">lifter is in their team.</tspan></text>
+<rect x="40" y="1342" width="340" height="326" rx="8" fill="#FFFFFF" stroke="#B5532A" stroke-width="2"/>
+<rect x="40" y="1342" width="340" height="62" rx="8" fill="#B5532A"/>
+<rect x="40" y="1396" width="340" height="8" fill="#B5532A"/>
+<text x="56" y="1370" font-size="21" class="m" fill="#FFFFFF" font-weight="700">plans</text>
+<text x="56" y="1392" font-size="16" fill="#FFFFFF" fill-opacity="0.9">a team's or one person's programme</text>
+<text x="56" y="1429" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="364" y="1429" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK</text>
+<line x1="50" x2="370" y1="1440" y2="1440" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="1465" font-size="18" class="m" fill="#1B1D22">team_id</text>
+<rect x="293.8" y="1448" width="78.2" height="24" rx="12" fill="#2247D6" fill-opacity="0.13"/>
+<text x="364" y="1465" font-size="15" fill="#2247D6" text-anchor="end">→ teams</text>
+<line x1="50" x2="370" y1="1476" y2="1476" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="1501" font-size="18" class="m" fill="#1B1D22">owner_id</text>
+<rect x="268" y="1484" width="104" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="364" y="1501" font-size="15" fill="#7A4FB0" text-anchor="end">→ profiles</text>
+<line x1="50" x2="370" y1="1512" y2="1512" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="1537" font-size="18" class="m" fill="#1B1D22">created_by</text>
+<rect x="268" y="1520" width="104" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="364" y="1537" font-size="15" fill="#7A4FB0" text-anchor="end">→ profiles</text>
+<line x1="50" x2="370" y1="1548" y2="1548" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="1573" font-size="18" class="m" fill="#1B1D22">name</text>
+<line x1="50" x2="370" y1="1584" y2="1584" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="1609" font-size="18" class="m" fill="#1B1D22">content</text>
+<text x="364" y="1609" font-size="15" fill="#5F6873" text-anchor="end">weeks › days › exercises</text>
+<line x1="50" x2="370" y1="1620" y2="1620" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="56" y="1645" font-size="18" class="m" fill="#1B1D22">source_text</text>
+<rect x="420" y="1342" width="340" height="254" rx="8" fill="#FFFFFF" stroke="#B5532A" stroke-width="2"/>
+<rect x="420" y="1342" width="340" height="62" rx="8" fill="#B5532A"/>
+<rect x="420" y="1396" width="340" height="8" fill="#B5532A"/>
+<text x="436" y="1370" font-size="21" class="m" fill="#FFFFFF" font-weight="700">plan_assignments</text>
+<text x="436" y="1392" font-size="16" fill="#FFFFFF" fill-opacity="0.9">a plan given to one athlete</text>
+<text x="436" y="1429" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="744" y="1429" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK</text>
+<line x1="430" x2="750" y1="1440" y2="1440" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="1465" font-size="18" class="m" fill="#1B1D22">plan_id</text>
+<text x="744" y="1465" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ plans</text>
+<line x1="430" x2="750" y1="1476" y2="1476" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="1501" font-size="18" class="m" fill="#1B1D22">athlete_id</text>
+<rect x="648" y="1484" width="104" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="744" y="1501" font-size="15" fill="#7A4FB0" text-anchor="end">→ profiles</text>
+<line x1="430" x2="750" y1="1512" y2="1512" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="1537" font-size="18" class="m" fill="#1B1D22">start_date</text>
+<line x1="430" x2="750" y1="1548" y2="1548" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="436" y="1573" font-size="18" class="m" fill="#1B1D22">weekdays</text>
+<text x="744" y="1573" font-size="15" fill="#5F6873" text-anchor="end">1 = Mon … 7 = Sun</text>
+<rect x="800" y="1342" width="340" height="326" rx="8" fill="#FFFFFF" stroke="#B5532A" stroke-width="2"/>
+<rect x="800" y="1342" width="340" height="62" rx="8" fill="#B5532A"/>
+<rect x="800" y="1396" width="340" height="8" fill="#B5532A"/>
+<text x="816" y="1370" font-size="21" class="m" fill="#FFFFFF" font-weight="700">workouts</text>
+<text x="816" y="1392" font-size="16" fill="#FFFFFF" fill-opacity="0.9">one training day for one athlete</text>
+<text x="816" y="1429" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="1124" y="1429" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK</text>
+<line x1="810" x2="1130" y1="1440" y2="1440" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1465" font-size="18" class="m" fill="#1B1D22">athlete_id</text>
+<rect x="1028" y="1448" width="104" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="1124" y="1465" font-size="15" fill="#7A4FB0" text-anchor="end">→ profiles</text>
+<line x1="810" x2="1130" y1="1476" y2="1476" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1501" font-size="18" class="m" fill="#1B1D22">assignment_id</text>
+<text x="1124" y="1501" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ plan_assignments</text>
+<line x1="810" x2="1130" y1="1512" y2="1512" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1537" font-size="18" class="m" fill="#1B1D22">week_no · day_no</text>
+<line x1="810" x2="1130" y1="1548" y2="1548" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1573" font-size="18" class="m" fill="#1B1D22">label</text>
+<line x1="810" x2="1130" y1="1584" y2="1584" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1609" font-size="18" class="m" fill="#1B1D22">scheduled_date</text>
+<text x="1124" y="1609" font-size="15" fill="#5F6873" text-anchor="end">coach can move</text>
+<line x1="810" x2="1130" y1="1620" y2="1620" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="816" y="1645" font-size="18" class="m" fill="#1B1D22">completed_at</text>
+<text x="1124" y="1645" font-size="15" fill="#5F6873" text-anchor="end">empty = not done</text>
+<rect x="1180" y="1342" width="340" height="326" rx="8" fill="#FFFFFF" stroke="#B5532A" stroke-width="2"/>
+<rect x="1180" y="1342" width="340" height="62" rx="8" fill="#B5532A"/>
+<rect x="1180" y="1396" width="340" height="8" fill="#B5532A"/>
+<text x="1196" y="1370" font-size="21" class="m" fill="#FFFFFF" font-weight="700">set_logs</text>
+<text x="1196" y="1392" font-size="16" fill="#FFFFFF" fill-opacity="0.9">one set the athlete finished</text>
+<text x="1196" y="1429" font-size="18" class="m" fill="#1B1D22" font-weight="700">id</text>
+<text x="1504" y="1429" font-size="15" fill="#9A6F08" font-weight="700" text-anchor="end">PK</text>
+<line x1="1190" x2="1510" y1="1440" y2="1440" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="1196" y="1465" font-size="18" class="m" fill="#1B1D22">workout_id</text>
+<text x="1504" y="1465" font-size="15" fill="#1B1D22" font-weight="600" text-anchor="end">→ workouts</text>
+<line x1="1190" x2="1510" y1="1476" y2="1476" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="1196" y="1501" font-size="18" class="m" fill="#1B1D22">athlete_id</text>
+<rect x="1408" y="1484" width="104" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="1504" y="1501" font-size="15" fill="#7A4FB0" text-anchor="end">→ profiles</text>
+<line x1="1190" x2="1510" y1="1512" y2="1512" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="1196" y="1537" font-size="18" class="m" fill="#1B1D22">exercise · set_no</text>
+<line x1="1190" x2="1510" y1="1548" y2="1548" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="1196" y="1573" font-size="18" class="m" fill="#1B1D22">weight_kg · reps</text>
+<line x1="1190" x2="1510" y1="1584" y2="1584" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="1196" y="1609" font-size="18" class="m" fill="#1B1D22">done_at</text>
+<line x1="1190" x2="1510" y1="1620" y2="1620" stroke="#C9C3B2" stroke-opacity="0.6"/>
+<text x="1196" y="1645" font-size="18" class="m" fill="#1B1D22">recording_id</text>
+<text x="1504" y="1645" font-size="15" fill="#C0392B" font-weight="700" text-anchor="end">→ sessions</text>
+<path d="M420,295 H400 V209 H380" fill="none" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M760,259 H780 V209 H800" fill="none" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M760,589 H790 V231 H800" fill="none" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M380,661 H400 V503 H420" fill="none" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M40,625 H26 V209 H40" fill="none" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M800,971 H780 V885 H760" fill="none" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M420,1151 H400 V885 H380" fill="none" stroke="#5F6873" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowMuted)"/>
+<path d="M420,1459 H400 V1373 H380" fill="none" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M800,1495 H780 V1373 H760" fill="none" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M1180,1459 H1160 V1373 H1140" fill="none" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M1520,1639 H1540 V1247 H590 V1182" fill="none" stroke="#C0392B" stroke-width="3" marker-end="url(#arrowRed)"/>
+<rect x="650" y="1225" width="520" height="30" rx="6" fill="#F7F5EF"/>
+<text x="660" y="1247" font-size="17" fill="#C0392B" font-weight="700">recording_id (optional): where the plan meets the sensors</text>
+<text x="40" y="1742" font-size="22" fill="#1B1D22" font-weight="700">How to read it</text>
+<line x1="40" x2="96" y1="1776" y2="1776" stroke="#1B1D22" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="130" y="1782" font-size="18" fill="#1B1D22">Foreign key: the row at the tail refers to the row the arrow points at.</text>
+<rect x="40" y="1800" width="96" height="24" rx="12" fill="#7A4FB0" fill-opacity="0.13"/>
+<text x="88" y="1818" font-size="15" fill="#7A4FB0" text-anchor="middle">→ profiles</text>
+<text x="150" y="1818" font-size="18" fill="#1B1D22">A tag instead of a line: this column refers to a person (profiles) or a team, drawn as a tag to keep lines short.</text>
+<text x="40" y="1854" font-size="17" fill="#9A6F08" font-weight="700">PK</text>
+<text x="130" y="1854" font-size="18" fill="#1B1D22">Primary key, each row’s own id. All ids are uuids; a person’s id is their login id.</text>
+<line x1="40" x2="96" y1="1884" y2="1884" stroke="#C0392B" stroke-width="3" marker-end="url(#arrowRed)"/>
+<text x="130" y="1890" font-size="18" fill="#1B1D22">Deleting a plan, assignment or workout never deletes recordings: the set’s recording_id just becomes empty.</text>
+<circle cx="56" cy="1920" r="6" fill="#B5532A"/>
+<text x="130" y="1926" font-size="18" fill="#1B1D22">Plans belong to a team (team_id) or one person (owner_id). Workouts without assignment_id are free workouts.</text>
 </svg>
