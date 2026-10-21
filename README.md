@@ -27,7 +27,7 @@
   </tr>
 </table>
 
-<p align="center"><sub>Click a section below to open it.</sub></p>
+<p align="center"><sub>⬇️ Click a section below to open it ⬇️</sub></p>
 
 ---
 
