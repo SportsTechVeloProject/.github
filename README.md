@@ -4,7 +4,7 @@
 
 **Velocity-based training for powerlifters and strength-athletes, built on two off-the-shelf Movesense sensors and a web app for athletes and coaches.**
 
-### [▶ Open the V-LO web app](https://sportstechveloproject.github.io/.github/code/website/)
+# [▶ Open the V-LO web app](https://sportstechveloproject.github.io/.github/code/website/)
 
 ![Sensors](https://img.shields.io/badge/sensors-2×_Movesense-7086f5?style=flat-square)
 ![Sampling](https://img.shields.io/badge/sampling-104_Hz-7086f5?style=flat-square)
@@ -13,8 +13,6 @@
 ![Lifts](https://img.shields.io/badge/lifts-squat_·_bench_·_deadlift-e8875f?style=flat-square)
 
 [Why VBT](#why-vbt) · [The problem](#the-problem) · [How it works](#how-it-works) · [The app](#the-app) · [Results](#results) · [Get started](#get-started) · [Team](#team)
-
-<sub>Click a section below to open it.</sub>
 
 </div>
 
@@ -28,6 +26,8 @@
     <td align="center" width="25%"><img src="docs/images/readme/female-deadlift.png" alt="Deadlift"><br><sub><b>Deadlift</b></sub></td>
   </tr>
 </table>
+
+<p align="center"><sub>Click a section below to open it.</sub></p>
 
 ---
 
