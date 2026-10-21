@@ -232,10 +232,12 @@ The table shows the mean absolute error (± SD) between V-LO and GymAware, in m/
 | Starting strength (> 1.3 m/s) | 0.33 ± 0.17 | 0.21 ± 0.13 | ❌ No |
 
 
-<p align="center">
-  <img src="docs/images/PeakVelocity.png" width="400" height="300" />
-  <img src="docs/images/MeanVelocity.png" width="400" height="300" />
-</p>
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="docs/images/readme/MeanVelocity.png" alt="Mean velocity per participant, GymAware vs V-LO"><br><sub><b>Mean velocity</b></sub></td>
+    <td align="center" width="50%"><img src="docs/images/readme/PeakVelocity.png" alt="Peak velocity per participant, GymAware vs V-LO"><br><sub><b>Peak velocity</b></sub></td>
+  </tr>
+</table>
 
 
 ### Why accuracy drops at high speed
