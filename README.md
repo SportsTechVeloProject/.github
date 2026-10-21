@@ -302,26 +302,27 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 
 
 
-```
+<pre>
 .github/
-├── README.md                  ← this page
-├── code/                      ← sensor streaming, analysis and web app
-│   ├── web/                   ← the web app (vlo.html)
-│   ├── analysis/              ← Python analysis (Squats2)
-│   └── pipeline/              ← Supabase webhook and Azure setup
-├── data/                      ← recorded sensor data and test results
-├── docs/
-│   └── images/
-│       ├── readme/            ← banners, diagrams and 3D lifters for this page
-│       └── website/           ← screenshots of the V-LO website
-└── Issue_Template/            ← templates for reporting issues
-```
+├── <a href="README.md">README.md</a>                  ← this page
+├── <a href="code/">code/</a>                      ← all source code
+│   ├── <a href="code/analysis/">analysis/</a>              ← Python analysis of the sensor data
+│   ├── <a href="code/database/">database/</a>              ← Supabase database setup
+│   └── <a href="code/website/">website/</a>               ← the V-LO web app
+├── <a href="data/">data/</a>                      ← recorded sensor data and test results
+├── <a href="docs/">docs/</a>
+│   └── <a href="docs/images/">images/</a>
+│       ├── <a href="docs/images/readme/">readme/</a>            ← banners, diagrams and 3D lifters for this page
+│       └── <a href="docs/images/website/">website/</a>           ← screenshots of the V-LO website
+└── <a href="Issue_Template/">Issue_Template/</a>            ← templates for reporting issues
+</pre>
 
 | Path | What's inside |
 |---|---|
-| [`code/web/`](code/web/) | The web app: connecting to the sensors, recording sets and showing feedback. Start it with `python -m http.server 8080`. |
+| [`code/`](code/) | All source code for the project, split into the three folders below. |
 | [`code/analysis/`](code/analysis/) | The Python analysis: Madgwick filter, drift correction, rep detection and velocity estimation. |
-| [`code/pipeline/`](code/pipeline/) | The Supabase webhook and the Azure app that runs the analysis after each set. |
+| [`code/database/`](code/database/) | The Supabase setup where recordings and results are stored. |
+| [`code/website/`](code/website/) | The web app: connecting to the sensors, recording sets and showing feedback. Start it with `python -m http.server 8080`. |
 | [`data/`](data/) | Recorded sensor data from test sessions, plus the GymAware reference data used in the validation. |
 | [`docs/images/readme/`](docs/images/readme/) | The banners, diagrams and 3D lifter images used in this README. |
 | [`docs/images/website/`](docs/images/website/) | Screenshots of the V-LO website, with a [walkthrough](docs/images/website/README.md) explaining each page. |
