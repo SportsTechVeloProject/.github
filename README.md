@@ -299,12 +299,29 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 <summary><h1>📁 Repository</h1></summary>
 <br>
 
-| Folder | Contents |
+
+
+
+```
+.github/
+├── README.md                  ← this page
+├── code/                      ← sensor streaming, analysis and web app
+├── data/                      ← recorded sensor data and test results
+├── docs/
+│   └── images/
+│       ├── readme/            ← banners, diagrams and 3D lifters for this page
+│       └── website/           ← screenshots of the V-LO website
+└── Issue_Template/            ← templates for reporting issues
+```
+
+| Path | What's inside |
 |---|---|
-| [`code/`](code/) | Sensor streaming, processing pipeline and web app |
-| [`data/`](data/) | Recorded sensor data and evaluation data |
-| [`docs/`](docs/) | Documentation, images and detailed READMEs |
-| [`ISSUE_TEMPLATE/`](ISSUE_TEMPLATE/) | Templates for reporting issues |
+| [`code/`](code/) | The source code: streaming data from the Movesense sensors, the Python analysis (filtering, rep detection and velocity estimation), and the web app. |
+| [`data/`](data/) | Recorded sensor data from test sessions, plus the GymAware reference data used in the validation. |
+| [`docs/images/readme/`](docs/images/readme/) | The banners, diagrams and 3D lifter images used in this README. |
+| [`docs/images/website/`](docs/images/website/) | Screenshots of the V-LO website, with a [walkthrough](docs/images/website/README.md) explaining each page. |
+| [`Issue_Template/`](Issue_Template/) | Templates for reporting bugs and suggesting features. |
+
 
 </details>
 
