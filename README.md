@@ -306,6 +306,9 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 .github/
 ├── README.md                  ← this page
 ├── code/                      ← sensor streaming, analysis and web app
+│   ├── web/                   ← the web app (vlo.html)
+│   ├── analysis/              ← Python analysis (Squats2)
+│   └── pipeline/              ← Supabase webhook and Azure setup
 ├── data/                      ← recorded sensor data and test results
 ├── docs/
 │   └── images/
@@ -316,7 +319,9 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 
 | Path | What's inside |
 |---|---|
-| [`code/`](code/) | The source code: streaming data from the Movesense sensors, the Python analysis (filtering, rep detection and velocity estimation), and the web app. |
+| [`code/web/`](code/web/) | The web app: connecting to the sensors, recording sets and showing feedback. Start it with `python -m http.server 8080`. |
+| [`code/analysis/`](code/analysis/) | The Python analysis: Madgwick filter, drift correction, rep detection and velocity estimation. |
+| [`code/pipeline/`](code/pipeline/) | The Supabase webhook and the Azure app that runs the analysis after each set. |
 | [`data/`](data/) | Recorded sensor data from test sessions, plus the GymAware reference data used in the validation. |
 | [`docs/images/readme/`](docs/images/readme/) | The banners, diagrams and 3D lifter images used in this README. |
 | [`docs/images/website/`](docs/images/website/) | Screenshots of the V-LO website, with a [walkthrough](docs/images/website/README.md) explaining each page. |
