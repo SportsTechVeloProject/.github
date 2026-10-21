@@ -304,30 +304,41 @@ Standing still at the start gives a clean baseline, gaps between reps help separ
 
 <pre>
 .github/
-├── <a href="README.md">README.md</a>                  ← this page
-├── <a href="code/">code/</a>                      ← all source code
-│   ├── <a href="code/analysis/">analysis/</a>              ← Python analysis of the sensor data
-│   ├── <a href="code/database/">database/</a>              ← Supabase database setup
-│   └── <a href="code/website/">website/</a>               ← the V-LO web app
-├── <a href="data/">data/</a>                      ← recorded sensor data and test results
+├── <a href="README.md">README.md</a>                           ← this page
+├── <a href="code/">code/</a>                               ← all source code
+│   ├── <a href="code/analysis/">analysis/</a>                       ← Azure app that analyses each set
+│   │   ├── <a href="code/analysis/squat/">squat/</a>                      ← squat analysis (Squats2.py)
+│   │   ├── <a href="code/analysis/function_app.py">function_app.py</a>             ← entry point Azure runs
+│   │   └── <a href="code/analysis/requirements.txt">requirements.txt</a>            ← Python packages
+│   ├── <a href="code/database/">database/</a>                       ← Supabase database
+│   │   ├── <a href="code/database/migrations/">migrations/</a>                 ← changes to the tables, by date
+│   │   └── <a href="code/database/queries/">queries/</a>                    ← useful SQL queries
+│   └── <a href="code/website/">website/</a>                        ← the V-LO web app
+│       ├── <a href="code/website/css/">css/</a>                        ← styling (vlo.css)
+│       └── <a href="code/website/js/">js/</a>                         ← app logic: sensors, recording, charts
+├── <a href="data/">data/</a>                               ← recorded sensor data and test results
 ├── <a href="docs/">docs/</a>
-│   └── <a href="docs/images/">images/</a>
-│       ├── <a href="docs/images/readme/">readme/</a>            ← banners, diagrams and 3D lifters for this page
-│       └── <a href="docs/images/website/">website/</a>           ← screenshots of the V-LO website
-└── <a href="Issue_Template/">Issue_Template/</a>            ← templates for reporting issues
+│   ├── <a href="docs/images/">images/</a>
+│   │   ├── <a href="docs/images/readme/">readme/</a>                     ← banners, diagrams and 3D lifters
+│   │   └── <a href="docs/images/website/">website/</a>                    ← screenshots of the V-LO website
+│   └── <a href="docs/papers/">papers/</a>                         ← final paper and presentation
+└── <a href="Issue_Template/">Issue_Template/</a>                     ← templates for reporting issues
 </pre>
 
 | Path | What's inside |
 |---|---|
-| [`code/`](code/) | All source code for the project, split into the three folders below. |
-| [`code/analysis/`](code/analysis/) | The Python analysis: Madgwick filter, drift correction, rep detection and velocity estimation. |
-| [`code/database/`](code/database/) | The Supabase setup where recordings and results are stored. |
-| [`code/website/`](code/website/) | The web app: connecting to the sensors, recording sets and showing feedback. Start it with `python -m http.server 8080`. |
+| [`code/analysis/`](code/analysis/) | The Azure app that runs after every saved set. `function_app.py` is the entry point, and `supabase_api.py` reads recordings from and writes results back to Supabase. |
+| [`code/analysis/squat/`](code/analysis/squat/) | The squat analysis: `MagdwickFilter.py` (orientation), `ValidatePeaks.py` (rep detection), `VelocityCalculations.py` (velocity) and `Squats2.py`, which ties them together. |
+| [`code/database/migrations/`](code/database/migrations/) | SQL files that build and change the Supabase tables, named by date so they run in order. |
+| [`code/database/queries/`](code/database/queries/) | Saved SQL queries, such as `processing-timing.sql` for checking how long the analysis takes. |
+| [`code/website/`](code/website/) | The V-LO web app. Start it with `python -m http.server 8080`. |
+| [`code/website/css/`](code/website/css/) | The styling for the whole app, in `vlo.css`. |
+| [`code/website/js/`](code/website/js/) | The app logic: `sensors.js` (Bluetooth), `recorder.js` (recording sets), `charts.js`, `vbt.js`, `team.js`, `plans.js` and more. |
 | [`data/`](data/) | Recorded sensor data from test sessions, plus the GymAware reference data used in the validation. |
 | [`docs/images/readme/`](docs/images/readme/) | The banners, diagrams and 3D lifter images used in this README. |
 | [`docs/images/website/`](docs/images/website/) | Screenshots of the V-LO website, with a [walkthrough](docs/images/website/README.md) explaining each page. |
+| [`docs/papers/`](docs/papers/) | The [final paper](docs/papers/Full%20Time%20Paper.pdf) and the [final presentation](docs/papers/V-LO%20Final%20Presentation.pdf). |
 | [`Issue_Template/`](Issue_Template/) | Templates for reporting bugs and suggesting features. |
-
 
 </details>
 
