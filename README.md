@@ -211,21 +211,49 @@ Coaches get a team view with training volume, average bar speed per lift, and PR
 <summary><h1>📊 Results</h1></summary>
 <br>
 
-We validated V-LO against a **GymAware linear position transducer**, a gold-standard reference that recorded the same reps.
+We validated V-LO against a **GymAware RS linear position transducer**, a gold-standard reference that recorded the same reps at the same time.
 
 <table>
   <tr>
-    <td align="center" width="33%"><h2>4</h2><sub>participants, 6 reps in each velocity zone</sub></td>
-    <td align="center" width="33%"><h2>Low&nbsp;speed</h2><sub>is where V-LO matches GymAware most closely</sub></td>
+    <td align="center" width="33%"><h2>4</h2><sub>participants, 6 squats in each of 3 velocity zones</sub></td>
+    <td align="center" width="33%"><h2>&lt;&nbsp;0.10&nbsp;m/s</h2><sub>error in the zones where powerlifters train</sub></td>
+    <td align="center" width="33%"><h2>5.8&nbsp;s</h2><sub>median time from saved set to feedback</sub></td>
   </tr>
 </table>
 
-V-LO's average and peak velocity follow GymAware closely. Estimates are most accurate at lower velocities and drift more for faster movements.
-The table displays the mean average difference (MAD) between the gymAware data and the V-LO velocity approximation and the standard deviation(MAD SD). The data is separated by the speed zone the repetitions are performed in. 
-| Metric | Absolute Strength MAD | Absolute Strength MAD SD | Speed Strength MAD | Speed Strength MAD SD | Starting Strength MAD | Starting Strength MAD SD |
-|--------|----------------------:|-------------------------:|-------------------:|----------------------:|----------------------:|-------------------------:|
-| Mean velocity [m/s] | 0.03 | 0.04 | 0.05 | 0.06 | 0.33 | 0.17 |
-| Peak velocity [m/s] | 0.02 | 0.02 | 0.06 | 0.03 | 0.21 | 0.13 |
+## Accurate where powerlifters train
+
+The table shows the mean absolute error (± SD) between V-LO and GymAware, in m/s:
+
+| Zone (by peak velocity) | Mean velocity | Peak velocity | Error below 0.10 m/s? |
+|---|---:|---:|:---:|
+| Absolute strength (< 0.5 m/s) | 0.03 ± 0.02 | 0.04 ± 0.02 | ✅ Yes |
+| Speed strength (0.5–1.3 m/s) | 0.05 ± 0.16 | 0.06 ± 0.03 | ✅ Yes |
+| Starting strength (> 1.3 m/s) | 0.33 ± 0.17 | 0.21 ± 0.13 | ❌ No |
+
+<p align="center"><img src="docs/images/readme/peak-velocity-chart.png" width="60%" alt="Peak velocity per participant, GymAware vs V-LO"></p>
+
+### Why accuracy drops at high speed
+
+V-LO doesn't measure velocity directly. It integrates acceleration over each rep, and that approach works best for slower, heavier lifts:
+
+- **Fast reps are short.** At 104 Hz, a very fast rep contains fewer samples, so each small measurement error carries more weight in the result.
+- **Fast reps have bigger, sharper accelerations.** Quick changes in speed and more bar vibration make the signal harder to follow, and errors build up faster during integration.
+- **The drift correction assumes the drift is linear.** That holds well over a controlled lift, but less well when the movement is very explosive.
+
+This matters less than it sounds: **peak velocities above 1.3 m/s only happen with very light loads, which powerlifters rarely train with.** In the zones where powerlifting training happens, the error stays below 0.10 m/s.
+
+## Feedback before the next set
+
+<table>
+  <tr>
+    <td align="center" width="50%"><h1>5.8 s</h1><sub>median processing time</sub></td>
+    <td align="center" width="50%"><h1>0.9–7.5 s</h1><sub>range over 7 recorded sets</sub></td>
+  </tr>
+</table>
+
+Measured from the moment a recording is saved until its results appear in the app. Results usually arrive well before the next set starts, since rest between sets in powerlifting is typically a few minutes. The spread comes mainly from the analysis app on Azure: when it has been idle, it needs a few extra seconds to start up. This is a preliminary test.
+
 </details>
 
 ---
