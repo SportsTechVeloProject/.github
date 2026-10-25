@@ -144,6 +144,13 @@ Movesense is commercially available, with a 9-axis IMU and Bluetooth Low Energy.
   </td>
   </tr>
 </table>
+- <p align="center">
+  <a href="https://www.youtube.com/watch?v=cQcUsm05aqw">
+    <img src="https://img.youtube.com/vi/cQcUsm05aqw/maxresdefault.jpg" alt="Watch the V-LO demo on YouTube" width="720">
+  </a>
+  <br>
+  <sub><b>▶ Watch the demo on YouTube</b></sub>
+</p>
 
 <details>
 <summary><h3>Data pipeline in detail · click to open</h3></summary>
@@ -157,6 +164,8 @@ Movesense is commercially available, with a 9-axis IMU and Bluetooth Low Energy.
 - **Cold start:** if Azure has been idle, the first set can take 10–30 s.
 - **Retries:** missed sets are resent automatically every minute.
 - **Errors:** if a set can't be analyzed, it shows the reason instead of a result.
+
+
 
 </details>
 
